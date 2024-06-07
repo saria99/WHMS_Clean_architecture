@@ -1,0 +1,45 @@
+﻿@using System.Security.Claims
+@using Indotalent.Applications.ApplicationUsers
+@using Indotalent.Applications.Companies
+@using Indotalent.Infrastructures.Images
+@inject ApplicationUserService UserService
+@inject CompanyService CompanyService
+@inject IFileImageService FileImageService
+@{
+    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+    var currentLoginUser = await UserService.GetByIdAsync(userId);
+    var nameEmail = currentLoginUser?.FullName ?? currentLoginUser?.Email;
+    var avatarId = currentLoginUser?.Avatar;
+    var avatarUrl = await FileImageService.GetImageUrlFromImageIdAsync(avatarId);
+    var defaultCompany = await CompanyService.GetDefaultCompanyAsync();
+    var currency = defaultCompany?.Currency;
+}
+
+<nav class="navbar navbar-expand bg-light navbar-light px-4 py-0 dashminheader">
+    <a  asp-area="" asp-page="/Index"  class="navbar-brand d-flex d-lg-none me-4">
+        <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+    </a>
+    <a href="#" class="sidebar-toggler flex-shrink-0">
+        <i class="fa fa-bars"></i>
+    </a>
+    <div class="d-none d-md-flex ms-4">
+        <span>@ViewData["Title"]</span>
+    </div>
+    <div class="navbar-nav align-items-center ms-auto">
+        <div class="nav-item dropdown">
+            <span>Currency: @currency</span>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <img class="rounded-circle me-lg-2" src="@avatarUrl" alt="" style="width: 40px; height: 40px;">
+                <span class="d-none d-lg-inline-flex">@nameEmail</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                <a asp-area="" asp-page="/UserProfiles/UserList" class="nav-link btn btn-link text-black dropdown-item">My Profile</a>
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
+                    <button type="submit" class="nav-link btn btn-link text-black dropdown-item">Log Out</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>

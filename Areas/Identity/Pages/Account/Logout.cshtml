@@ -1,0 +1,44 @@
+﻿@page
+@model LogoutModel
+@using Indotalent.Applications.Companies
+@inject CompanyService CompanyService
+@{
+    ViewData["Title"] = "Log out";
+
+    var defaultCompany = await CompanyService.GetDefaultCompanyAsync();
+    var companyName = defaultCompany?.Name ?? string.Empty;
+}
+
+
+
+<div class="container-fluid">
+    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="rounded p-4 p-sm-5 my-4 mx-3 bg-light">
+            <div class="row">
+                <div class="col-md-12 text-center mb-3">
+                    <h3 class="text-primary">Sign Out</h3>
+                    <a asp-area="" asp-page="/Index" class="">
+                        <h5 class="text-primary"><i class="fas fa-home me-2"></i>@companyName</h5>
+                    </a>
+                </div>
+                <div class="col-md-12 text-center">
+
+                    if (User.Identity?.IsAuthenticated ?? false)
+                    {
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Click here to Logout</button>
+                    </form>
+                    }
+                    else
+                    {
+                    <p>You have successfully logged out of the application.</p>
+                    }
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

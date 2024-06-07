@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    @await Html.PartialAsync("~/Pages/Shared/Dashmin/__css.cshtml")
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+
+<body>
+    <div class="container-fluid position-relative bg-white d-flex p-0">
+        <!-- Sidebar Start -->
+        @await Html.PartialAsync("~/Pages/Shared/Dashmin/__sidebar.cshtml")
+        <!-- Sidebar End -->
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            @await Html.PartialAsync("~/Pages/Shared/Dashmin/__navbar.cshtml")
+            <!-- Navbar End -->
+            <!-- Blank Start -->
+            <div class="container-fluid pt-0 px-0 dashminbody">
+                @Html.AntiForgeryToken()
+                <div id="Toast"></div>
+                <!-- Spinner Start -->
+                <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                    <div class="spinner-grow text-primary" role="status"></div>
+                </div> 
+                <!-- Spinner End -->
+                @RenderBody()
+            </div>
+            <!-- Blank End -->
+            <!-- Footer Start -->
+            @await Html.PartialAsync("~/Pages/Shared/Dashmin/__footer.cshtml")
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+    </div>
+
+    @await Html.PartialAsync("~/Pages/Shared/Dashmin/__js.cshtml")
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

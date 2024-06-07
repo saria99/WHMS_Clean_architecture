@@ -1,0 +1,17 @@
+﻿@using Indotalent.Applications.Companies
+@inject CompanyService CompanyService
+@{
+    var defaultCompany = await CompanyService.GetDefaultCompanyAsync();
+    var companyName = defaultCompany?.Name ?? string.Empty;
+    var companyWeb = defaultCompany?.Website ?? "#";
+    var year = DateTime.Now.Year;
+}
+<div class="container-fluid pt-0 px-0 dashminfooter">
+    <div class="bg-light p-2">
+        <div class="row">
+            <div class="col-12 col-sm-6 text-center text-sm-start">
+                &copy; @year <a href="@companyWeb">@companyName</a>, All Right Reserved.
+            </div>
+        </div>
+    </div>
+</div>

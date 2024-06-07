@@ -1,0 +1,32 @@
+﻿@page
+@model ConfirmEmailModel
+@using Indotalent.Applications.Companies
+@inject CompanyService CompanyService
+@{
+    ViewData["Title"] = "Confirm email";
+    ViewData["StatusMessage"] = Model.StatusMessage;
+
+    var defaultCompany = await CompanyService.GetDefaultCompanyAsync();
+    var companyName = defaultCompany?.Name ?? string.Empty;
+}
+
+
+<partial name="~/Areas/Identity/Pages/Account/_StatusMessage.cshtml" model=@ViewData["StatusMessage"] />
+<div class="container-fluid">
+    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="rounded p-4 p-sm-5 my-4 mx-3 bg-light">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="row">
+                    <div class="col-md-12 text-center mb-3">
+                        <h3 class="text-primary">Confirm Email</h3>
+                        <a asp-area="" asp-page="/Index" class="">
+                            <h5 class="text-primary"><i class="fas fa-home me-2"></i>@companyName</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mb-0">Already have an Account? <a asp-page="./Login">Sign In</a></p>
+        </div>
+    </div>
+</div>
+

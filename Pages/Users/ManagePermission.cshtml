@@ -1,0 +1,134 @@
+﻿@page "{id?}"
+@model Indotalent.Pages.Users.ManagePermissionModel
+@{
+    Layout = "~/Pages/Shared/Dashmin/_Admin.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div id="Grid"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var isRoleEditable = @Model.RoleEditable.ToString().ToLower();
+            var gridContainer = document.getElementById('Grid');
+            if (gridContainer) {
+                var grid = new ej.grids.Grid({
+                    height: getDashminGridHeight(),
+                    dataSource: new ej.data.DataManager({
+                        url: '/odata/AspNetRoleChild',
+                        adaptor: new ej.data.ODataV4Adaptor(),
+                        headers: [
+                            { ParentId: "@Model.Id" }
+                        ]
+                    }),
+                    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, showDeleteConfirmDialog: true, mode: 'Normal', allowEditOnDblClick: isRoleEditable },
+                    allowFiltering: false,
+                    allowSorting: false,
+                    allowSelection: true,
+                    allowGrouping: true,
+                    groupSettings: { columns: ['Module'] },
+                    allowTextWrap: true,
+                    allowResizing: false,
+                    allowPaging: true,
+                    pageSettings: { currentPage: 1, pageSize: 50, pageSizes: ["10", "20", "50", "100", "200", "All"] },
+                    allowExcelExport: true,
+                    filterSettings: { type: 'CheckBox' },
+                    selectionSettings: { persistSelection: true, type: 'Single' },
+                    autoFit: false,
+                    showColumnMenu: false,
+                    gridLines: 'Horizontal',
+                    columns: [
+                        { type: 'checkbox', width: 30 },
+                        { field: 'Id', isPrimaryKey: true, headerText: 'Id', visible: false },
+                        { field: 'UserName', width: 100, allowEditing: false },
+                        { field: 'Module', width: 100, allowEditing: false },
+                        { field: 'Permission', width: 100, allowEditing: false },
+                        { field: 'GrantAccess', width: 100, editType: 'booleanedit', displayAsCheckBox: true, type: 'boolean', allowEditing: true },
+                    ],
+                    toolbar: [
+                        'ExcelExport',
+                        { type: 'Separator' },
+                        'Edit', 'Update', 'Cancel'
+                    ],
+                    beforeDataBound: () => {
+                    },
+                    dataBound: function () {
+                        if (isRoleEditable === true) {
+                            grid.toolbarModule.enableItems(['Grid_edit'], true);
+                        } else {
+                            grid.toolbarModule.enableItems(['Grid_edit'], false);
+                        }
+                    },
+                    excelExportComplete: () => {
+                    },
+                    rowSelected: () => {
+                        if (isRoleEditable === true) {
+                            grid.toolbarModule.enableItems(['Grid_edit'], true);
+                        } else {
+                            grid.toolbarModule.enableItems(['Grid_edit'], false);
+                        }
+                    },
+                    rowDeselected: () => {
+                        if (isRoleEditable === true) {
+                            grid.toolbarModule.enableItems(['Grid_edit'], true);
+                        } else {
+                            grid.toolbarModule.enableItems(['Grid_edit'], false);
+                        }
+                    },
+                    rowSelecting: () => {
+                        if (grid.getSelectedRecords().length) {
+                            grid.clearSelection();
+                        }
+                        if (isRoleEditable === true) {
+                            grid.toolbarModule.enableItems(['Grid_edit'], true);
+                        } else {
+                            grid.toolbarModule.enableItems(['Grid_edit'], false);
+                        }
+                    },
+                    toolbarClick: (args) => {
+                        if (args.item.id === 'Grid_excelexport') {
+                            grid.excelExport();
+                        }
+                    },
+                    actionComplete: (args) => {
+
+                        if (args.requestType === 'save' || args.requestType === 'delete') {
+
+                            let message = 'Delete Process Success';
+
+                            switch (args.action) {
+                                case 'add':
+                                    message = 'Add Process Success';
+                                    break;
+                                case 'edit':
+                                    message = 'Edit Process Success';
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                            new ej.notifications.Toast({
+                                content: message,
+                                cssClass: "e-toast-success",
+                                icon: 'e-success toast-icons',
+                                position: { X: "Left", Y: "Top" }
+                            }, '#Toast').show();
+                        }
+                    }
+                });
+
+
+                grid.appendTo('#Grid');
+            }
+
+        });
+
+
+    </script>
+}

@@ -1,0 +1,159 @@
+﻿@page "{rowGuid?}"
+@using Indotalent.Models.Enums
+@model Indotalent.Pages.Products.ProductFormModel
+@{
+    Layout = "~/Pages/Shared/Dashmin/_Admin.cshtml";
+    var statusMessage = Model.StatusMessage;
+    Model.StatusMessage = string.Empty;
+}
+
+<div class="form-card" id="formcard">
+    <div class="m-2">
+        <form id="formMain" method="post" novalidate="">
+            <input type="hidden" asp-for="@Model.ProductForm.RowGuid" />
+            <div class="form-card-body">
+                <div>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-0  text-body active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-0  text-body" id="audit-tab" data-bs-toggle="tab" data-bs-target="#audit" type="button" role="tab" aria-controls="audit" aria-selected="false">Audit</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                            <p class="small-italic-left">General</p>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        @if (!string.IsNullOrEmpty(Model.Number))
+                                        {
+                                            <h4>@Model.Number</h4>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.ProductForm.Name" class="form-label"></label>
+                                            <input asp-for="@Model.ProductForm.Name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.ProductForm.ProductGroupId" class="form-label"></label>
+                                            <select asp-for="@Model.ProductForm.ProductGroupId" asp-items="@Model.ProductGroupLookup" class="form-control">
+                                                <option value="">-- Select Group --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.ProductForm.UnitMeasureId" class="form-label"></label>
+                                            <select asp-for="@Model.ProductForm.UnitMeasureId" asp-items="@Model.UnitMeasureLookup" class="form-control">
+                                                <option value="">-- Select Measure --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.ProductForm.UnitPrice" class="form-label"></label>
+                                            <input asp-for="@Model.ProductForm.UnitPrice" class="form-control" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mt-3">
+                                            <label class="form-check-label" asp-for="@Model.ProductForm.Physical"></label>
+                                            <div class="form-check">
+                                                <input asp-for="@Model.ProductForm.Physical" type="checkbox" class="form-check-input" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.ProductForm.Description" class="form-label"></label>
+                                            <textarea asp-for="@Model.ProductForm.Description" class="form-control" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="tab-pane fade" id="audit" role="tabpanel" aria-labelledby="audit-tab">
+                            <p class="small-italic-left">Audit</p>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.ProductForm.CreatedAtString"></label>
+                                        <input class="form-control" asp-for="@Model.ProductForm.CreatedAtString" type="text" placeholder="CreatedAt" disabled />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.ProductForm.CreatedByUserName"></label>
+                                        <input class="form-control" asp-for="@Model.ProductForm.CreatedByUserName" type="text" placeholder="CreatedBy" disabled />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.ProductForm.UpdatedAtString"></label>
+                                        <input class="form-control" asp-for="@Model.ProductForm.UpdatedAtString" type="text" placeholder="UpdatedAt" disabled />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.ProductForm.UpdatedByUserName"></label>
+                                        <input class="form-control" asp-for="@Model.ProductForm.UpdatedByUserName" type="text" placeholder="UpdatedBy" disabled />
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+            <div class="form-card-footer">
+                <button type="submit" id="btnSubmit" class="e-btn e-control @(Model.Action == "delete" ? "e-danger" : "")">@(Model.Action == "delete" ? "Delete" : "Submit")</button>
+            </div>
+
+        </form>
+    </div>
+    
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            setFormCardHeight();
+
+            showStatusMessage('@statusMessage');
+
+            new ej.inputs.TextBox({}, '#ProductForm_Name');
+            new ej.inputs.TextBox({}, '#ProductForm_Description');
+            new ej.dropdowns.DropDownList({ allowFiltering: true }, '#ProductForm_ProductGroupId');
+            new ej.dropdowns.DropDownList({ allowFiltering: true }, '#ProductForm_UnitMeasureId');
+            new ej.inputs.NumericTextBox({ format: 'N2', min: 0.0 }, '#ProductForm_UnitPrice');
+            new ej.inputs.TextBox({}, '#ProductForm_CreatedAtString');
+            new ej.inputs.TextBox({}, '#ProductForm_CreatedByUserName');
+            new ej.inputs.TextBox({}, '#ProductForm_UpdatedAtString');
+            new ej.inputs.TextBox({}, '#ProductForm_UpdatedByUserName');
+            new ej.buttons.Button({ isPrimary: true }, '#btnSubmit');
+
+            var validationOptions = {
+                rules: {
+                    'ProductForm.Name': { required: true },
+                    'ProductForm.ProductGroupId': { required: true },
+                    'ProductForm.UnitMeasureId': { required: true },
+                    'ProductForm.UnitPrice': { required: true },
+                }
+            }
+
+            var formValidator = new ej.inputs.FormValidator('#formMain', validationOptions);
+            var formElement = document.getElementById('formMain');
+            formElement.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (formValidator.validate()) {
+                    formElement.submit();
+                }
+            })
+
+        });
+    </script>
+}

@@ -1,0 +1,273 @@
+﻿    <!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Libraries Stylesheet -->
+<link href="~/dashmin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="~/dashmin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+<!-- Customized Bootstrap Stylesheet -->
+<link href="~/dashmin/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="~/lib/syncfusion/css/bootstrap5.css" rel="stylesheet" />
+<script src="~/lib/syncfusion/js/ej2.min.js"></script>
+
+<!-- Template Stylesheet -->
+<link href="~/dashmin/css/style.css" rel="stylesheet">
+
+<style>
+    /* CUSTOM */
+
+    /*Form Group*/
+    .form-group{
+        margin-top: 10px;
+    }
+
+    /* For Syncfusion Grid */
+    #Grid .e-gridcontent {
+        cursor: pointer;
+    }
+
+    .e-grid .e-row.e-altrow {
+        background-color: var(--light);
+    }
+
+    .e-headertext {
+        padding-left: 5px;
+    }
+    .e-grid .e-gridpager .e-currentitem {
+        background-color: var(--primary);
+        color: #fff !important;
+    }
+
+    .e-grid .e-gridpager .e-numericitem {
+        color: var(--primary);
+    }
+
+    .e-contextmenu-wrapper ul .e-menu-item.e-selected, .e-contextmenu-container ul .e-menu-item.e-selected {
+        background-color: var(--primary);
+        color: #fff;
+        outline: 0 solid var(--primary);
+        outline-offset: 0;
+    }
+
+    .e-checkbox-wrapper .e-frame.e-stop, .e-css.e-checkbox-wrapper .e-frame.e-stop {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+    }
+
+    .e-checkbox-wrapper .e-frame.e-check, .e-css.e-checkbox-wrapper .e-frame.e-check {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+    }
+
+    .e-treeview .e-list-item.e-active > .e-text-content {
+        background-color: var(--primary);
+    }
+
+    .e-treeview .e-list-item.e-active > .e-fullrow {
+        background-color: var(--primary);
+        border-color: var(--primary);
+    }
+
+    .e-treeview .e-list-item.e-active.e-hover > .e-fullrow {
+        background-color: var(--primary);
+        border-color: var(--primary);
+    }
+
+    .e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
+        background-color: var(--primary);
+        color: #fff;
+    }
+
+    .e-btn.e-primary, .e-css.e-btn.e-primary {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+    }
+
+    .e-footer-content .e-btn.e-primary.e-flat:not([DISABLED]) {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+    }
+
+    .e-input-group, .e-input-group.e-control-wrapper {
+        border-radius: 0px;
+    }
+
+    .e-input-group.e-control-wrapper.e-disabled input.e-input {
+            background: var(--light);
+    }
+
+    .nav-tabs .nav-item .nav-link {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    /* Fieldset */
+    fieldset {
+        background-color: #fff;
+        width: 100%;
+        padding: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #dee2e6;
+    }
+
+
+    /* For FormCard */
+    .form-card {
+        border: 1px solid #dee2e6;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    .form-card-header {
+        background-color: #ffffff; 
+        color: #000000; 
+        padding: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: left; 
+    }
+
+    .form-card-body {
+        background-color: #ffffff; 
+        padding-top: 5px;
+        padding-right: 0;
+        padding-bottom: 5px;
+        padding-left: 0px;
+    }
+
+    .form-card-footer {
+        background-color: #ffffff; 
+        color: #000000;
+        padding-top: 5px;
+        padding-right: 0;
+        padding-bottom: 5px;
+        padding-left: 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        text-align: left; 
+    }
+
+    .form-label {
+        margin-bottom: 0px;
+        font-size: 0.875em;
+    }
+
+    .form-group {
+        margin-top: 0px;
+    }
+
+    html, body {
+        overflow-y: hidden;
+    }
+
+
+
+    .sticky-top {
+        z-index: 900 !important;
+    }
+
+    .content .navbar .navbar-nav .dropdown-item {
+        background-color: transparent !important;
+    }
+
+    .small-italic-left {
+        font-size: small; 
+        font-style: italic; 
+        text-align: left; 
+        margin-bottom: -10px;
+        margin-left: 0px;
+        padding-top: 10px;
+    }
+
+    .small-italic {
+        font-size: small;
+        font-style: italic;
+        position: relative;
+        margin: 10px;
+    }
+
+        .small-italic::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+
+    .dashminheader {
+
+    }
+
+    .dashminbody{
+        padding: 0px;
+    }
+
+    .dashminfooter {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+<style>
+    /* CSS scrollbar */
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #f8f9fa;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #dee2e6;
+        border-radius: 6px;
+        border: 3px solid #f8f9fa;
+        transition: filter 0.3s; 
+    }
+
+        ::-webkit-scrollbar-thumb:hover {
+            cursor: pointer; 
+            background-color: var(--primary);
+        }
+
+
+</style>
+
+<style>
+    #navbarnav {
+        width: 250px;
+        height: 70vh;
+        overflow-y: auto;
+    }
+
+    a {
+        color: var(--primary);
+    }
+
+    .nav-link {
+        color: var(--primary);
+    }
+
+    .text-primary {
+        color: var(--primary) !important;
+    }
+
+    :root {
+        --primary: #009CFF;
+        --bs-blue: #009CFF;
+        --bs-primary: #009CFF;
+    }
+</style>
+

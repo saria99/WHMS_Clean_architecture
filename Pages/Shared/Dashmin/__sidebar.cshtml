@@ -1,0 +1,64 @@
+﻿@using System.Security.Claims
+@using Indotalent.AppSettings
+@using Indotalent.Applications.ApplicationUsers
+@using Indotalent.Infrastructures.Images
+@using Indotalent.Infrastructures.Extensions
+@using Indotalent.Infrastructures.Menus
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@inject ApplicationUserService UserService
+@inject IFileImageService FileImageService
+@inject Microsoft.Extensions.Options.IOptions<ApplicationConfiguration> ApplicationConfiguration
+@inject MenuService MenuService
+@{
+    var currentPath = ViewData["Path"]?.ToString() ?? string.Empty;
+    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+    var currentLoginUser = await UserService.GetByIdAsync(userId);
+    var nameEmail = currentLoginUser?.FullName ?? currentLoginUser?.Email;
+    var avatarId = currentLoginUser?.Avatar;
+    var avatarUrl = await FileImageService.GetImageUrlFromImageIdAsync(avatarId);
+    var appConfig = ApplicationConfiguration.Value;
+    var appName = appConfig.AppName;
+}
+
+<div id="sidebar" class="sidebar pb-3">
+    <nav class="navbar bg-light navbar-light" style="padding-top: 0px;">
+        <div class="col-md-12 text-center pt-3 mb-4 d-grid align-items-center" style="height: 64px;">
+            <a href="#" class="navbar-brand mx-4 mb-3">
+                <h3 style="color: var(--dark);"><i class="fas fa-home me-2" style="color: var(--primary);"></i>@appName</h3>
+            </a>
+        </div>
+        <div class="d-flex align-items-center ms-4 mb-4">
+            <div class="position-relative">
+                <img class="rounded-circle" src="@avatarUrl" alt="" style="width: 40px; height: 40px;">
+                <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+            </div>
+            <div class="ms-3">
+                <h6 class="mb-0">@nameEmail</h6>
+            </div>
+        </div>
+        <div id="navbarnav" class="navbar-nav w-100">
+            <div id="mainMenuContainer">
+                <div id="mainMenu"></div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script>
+    var menuData = @Html.Raw(await MenuService.GetJsonTreeNodeAsync(@currentPath, @currentLoginUser));
+    var mainMenu = new ej.navigations.TreeView({
+        fullRowNavigable: true,
+        fields: {
+            dataSource: menuData,
+            id: 'id',
+            text: 'name',
+            selected: 'isSelected',
+            parentID: 'pid',
+            hasChildren: 'hasChild',
+            expanded: 'expanded',
+            navigateUrl: 'navURL',
+        },
+        enablePersistence: false,
+    });
+    mainMenu.appendTo('#mainMenu');
+</script>

@@ -1,0 +1,49 @@
+﻿@page
+@model RegisterConfirmationModel
+@using Indotalent.Applications.Companies
+@inject CompanyService CompanyService
+@{
+    ViewData["Title"] = "Register confirmation";
+
+    var defaultCompany = await CompanyService.GetDefaultCompanyAsync();
+    var companyName = defaultCompany?.Name ?? string.Empty;
+}
+
+<div class="container-fluid">
+    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="rounded p-4 p-sm-5 my-4 mx-3 bg-light">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="row">
+                    <div class="col-md-12 text-center mb-3">
+                        <h3 class="text-primary">Register Confirmation</h3>
+                        <a asp-area="" asp-page="/Index" class="">
+                            <h5 class="text-primary"><i class="fas fa-home me-2"></i>@companyName</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-12 text-center">
+
+                        @{
+                            if (@Model.DisplayConfirmAccountLink)
+                            {
+                                <p>
+                                    This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
+                                    Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
+                                </p>
+                            }
+                            else
+                            {
+                                <p>
+                                    Please check your email to confirm your account.
+                                </p>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+            <p class="text-start mb-0">Already have an Account? <a asp-page="./Login">Sign In</a></p>
+        </div>
+    </div>
+</div>
+
+
+
