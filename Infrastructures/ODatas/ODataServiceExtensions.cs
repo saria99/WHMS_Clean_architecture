@@ -67,7 +67,7 @@ namespace Indotalent.Infrastructures.ODatas
                 .AddOData(options => options.Select().Filter().OrderBy().Expand().Count().SetMaxTop(null)
                 .AddRouteComponents("odata", builder.GetEdmModel(), odataServices =>
                 {
-                    odataServices.AddSingleton<IODataQueryValidator, SFODataQueryValidator>();
+                    odataServices.AddSingleton<ODataQueryValidator, SFODataQueryValidator>();
                 }));
         }
     }
