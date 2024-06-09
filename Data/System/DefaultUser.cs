@@ -1,13 +1,13 @@
-﻿using Indotalent.Applications.Companies;
-using Indotalent.AppSettings;
-using Indotalent.Infrastructures.Images;
-using Indotalent.Infrastructures.Menus;
-using Indotalent.Models.Entities;
-using Indotalent.Pages.Shared.Dashmin;
+﻿using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.AppSettings;
+using GodwitWHMS.Infrastructures.Images;
+using GodwitWHMS.Infrastructures.Menus;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Pages.Shared.Dashmin;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 
-namespace Indotalent.Data.System
+namespace GodwitWHMS.Data.System
 {
     public static class DefaultUser
     {

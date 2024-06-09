@@ -1,6 +1,6 @@
-﻿using Indotalent.Models.Contracts;
+﻿using GodwitWHMS.Models.Contracts;
 
-namespace Indotalent.Infrastructures.Repositories
+namespace GodwitWHMS.Infrastructures.Repositories
 {
     public static class SoftDeleteFilter
     {

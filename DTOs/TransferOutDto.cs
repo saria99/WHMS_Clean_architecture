@@ -1,6 +1,6 @@
-﻿using Indotalent.Models.Enums;
+﻿using GodwitWHMS.Models.Enums;
 
-namespace Indotalent.DTOs
+namespace GodwitWHMS.DTOs
 {
     public class TransferOutDto
     {

@@ -1,12 +1,12 @@
-﻿using Indotalent.Applications.Companies;
-using Indotalent.AppSettings;
-using Indotalent.Infrastructures.Images;
-using Indotalent.Infrastructures.Menus;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.AppSettings;
+using GodwitWHMS.Infrastructures.Images;
+using GodwitWHMS.Infrastructures.Menus;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoUser
     {

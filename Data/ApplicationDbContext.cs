@@ -1,11 +1,11 @@
-﻿using Indotalent.Infrastructures.Docs;
-using Indotalent.Infrastructures.Images;
-using Indotalent.Models.Configurations;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Infrastructures.Docs;
+using GodwitWHMS.Infrastructures.Images;
+using GodwitWHMS.Models.Configurations;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Data
+namespace GodwitWHMS.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

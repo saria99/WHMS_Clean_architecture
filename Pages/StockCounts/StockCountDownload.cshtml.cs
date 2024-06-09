@@ -1,9 +1,9 @@
-using Indotalent.Infrastructures.Pdfs;
+using GodwitWHMS.Infrastructures.Pdfs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Pages.StockCounts
+namespace GodwitWHMS.Pages.StockCounts
 {
     [AllowAnonymous]
     public class StockCountDownloadModel : PageModel

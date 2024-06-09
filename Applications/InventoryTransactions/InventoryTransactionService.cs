@@ -1,12 +1,12 @@
-﻿using Indotalent.Applications.Warehouses;
-using Indotalent.Data;
-using Indotalent.Infrastructures.Repositories;
-using Indotalent.Models.Contracts;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+﻿using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Repositories;
+using GodwitWHMS.Models.Contracts;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Applications.InventoryTransactions
+namespace GodwitWHMS.Applications.InventoryTransactions
 {
     public class InventoryTransactionService : Repository<InventoryTransaction>
     {

@@ -1,6 +1,6 @@
-﻿using Indotalent.Applications.LogAnalytics;
+﻿using GodwitWHMS.Applications.LogAnalytics;
 
-namespace Indotalent.Infrastructures.Middlewares
+namespace GodwitWHMS.Infrastructures.Middlewares
 {
     public class LogAnalyticMiddleware
     {

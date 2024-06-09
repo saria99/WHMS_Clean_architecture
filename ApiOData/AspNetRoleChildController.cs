@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using Indotalent.Applications.ApplicationUsers;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.DTOs;
-using Indotalent.Infrastructures.Menus;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.ApplicationUsers;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.DTOs;
+using GodwitWHMS.Infrastructures.Menus;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Deltas;
@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.OData.Results;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
 
     public class AspNetRoleChildController : ODataController

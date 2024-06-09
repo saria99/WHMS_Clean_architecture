@@ -1,7 +1,7 @@
-﻿using Indotalent.Applications.VendorCategories;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.VendorCategories;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoVendorCategory
     {

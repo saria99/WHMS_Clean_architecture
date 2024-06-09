@@ -1,4 +1,4 @@
-﻿namespace Indotalent.Infrastructures.Repositories
+﻿namespace GodwitWHMS.Infrastructures.Repositories
 {
     public interface IRepository<T> where T : class
     {

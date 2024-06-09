@@ -1,10 +1,10 @@
-﻿using Indotalent.Applications.VendorContacts;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.VendorContacts;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class VendorContactController : ODataController
     {

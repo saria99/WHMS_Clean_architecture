@@ -1,17 +1,17 @@
 using AutoMapper;
-using Indotalent.Applications.Companies;
-using Indotalent.Infrastructures.Countries;
-using Indotalent.Infrastructures.Currencies;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Infrastructures.TimeZones;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.Infrastructures.Countries;
+using GodwitWHMS.Infrastructures.Currencies;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Infrastructures.TimeZones;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.Companies
+namespace GodwitWHMS.Pages.Companies
 {
     [Authorize]
     public class CompanyFormModel : PageModel

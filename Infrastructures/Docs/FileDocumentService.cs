@@ -1,6 +1,6 @@
-﻿using Indotalent.Data;
+﻿using GodwitWHMS.Data;
 
-namespace Indotalent.Infrastructures.Docs
+namespace GodwitWHMS.Infrastructures.Docs
 {
     public class FileDocumentService : IFileDocumentService
     {

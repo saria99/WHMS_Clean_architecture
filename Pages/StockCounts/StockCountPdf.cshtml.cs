@@ -1,12 +1,12 @@
-using Indotalent.Applications.Companies;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.StockCounts;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.StockCounts;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Pages.StockCounts
+namespace GodwitWHMS.Pages.StockCounts
 {
     [AllowAnonymous]
     public class StockCountPdfModel : PageModel

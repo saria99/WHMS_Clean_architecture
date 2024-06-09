@@ -1,4 +1,4 @@
-﻿namespace Indotalent.Infrastructures.Extensions
+﻿namespace GodwitWHMS.Infrastructures.Extensions
 {
     using Microsoft.CodeAnalysis.CSharp.Syntax;
     using System;

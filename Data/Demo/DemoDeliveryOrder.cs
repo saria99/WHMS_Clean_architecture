@@ -1,14 +1,14 @@
-﻿using Indotalent.Applications.DeliveryOrders;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.SalesOrderItems;
-using Indotalent.Applications.SalesOrders;
-using Indotalent.Applications.Warehouses;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+﻿using GodwitWHMS.Applications.DeliveryOrders;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.SalesOrderItems;
+using GodwitWHMS.Applications.SalesOrders;
+using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoDeliveryOrder
     {

@@ -1,11 +1,11 @@
-﻿using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.TransferIns;
-using Indotalent.Applications.TransferOuts;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+﻿using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.TransferIns;
+using GodwitWHMS.Applications.TransferOuts;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoTransferIn
     {

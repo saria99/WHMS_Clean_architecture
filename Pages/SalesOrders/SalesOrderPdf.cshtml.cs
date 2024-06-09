@@ -1,12 +1,12 @@
-using Indotalent.Applications.Companies;
-using Indotalent.Applications.SalesOrderItems;
-using Indotalent.Applications.SalesOrders;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.Applications.SalesOrderItems;
+using GodwitWHMS.Applications.SalesOrders;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Pages.SalesOrders
+namespace GodwitWHMS.Pages.SalesOrders
 {
     [AllowAnonymous]
     public class SalesOrderPdfModel : PageModel

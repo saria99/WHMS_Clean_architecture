@@ -1,11 +1,11 @@
-﻿using Indotalent.Applications.PurchaseOrders;
-using Indotalent.Data;
-using Indotalent.Infrastructures.Repositories;
-using Indotalent.Models.Contracts;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.PurchaseOrders;
+using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Repositories;
+using GodwitWHMS.Models.Contracts;
+using GodwitWHMS.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Applications.PurchaseOrderItems
+namespace GodwitWHMS.Applications.PurchaseOrderItems
 {
     public class PurchaseOrderItemService : Repository<PurchaseOrderItem>
     {

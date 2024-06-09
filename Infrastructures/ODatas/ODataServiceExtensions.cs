@@ -1,9 +1,9 @@
-﻿using Indotalent.DTOs;
+﻿using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.OData.Query.Validator;
 using Microsoft.OData.ModelBuilder;
 
-namespace Indotalent.Infrastructures.ODatas
+namespace GodwitWHMS.Infrastructures.ODatas
 {
     public static class ODataServiceExtensions
     {

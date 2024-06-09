@@ -1,10 +1,10 @@
-using Indotalent.Applications.LogSessions;
-using Indotalent.Infrastructures.Extensions;
+using GodwitWHMS.Applications.LogSessions;
+using GodwitWHMS.Infrastructures.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Pages.LogSessions
+namespace GodwitWHMS.Pages.LogSessions
 {
     [Authorize]
     public class LogClearingFormModel : PageModel

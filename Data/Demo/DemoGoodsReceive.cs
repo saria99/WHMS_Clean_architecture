@@ -1,14 +1,14 @@
-﻿using Indotalent.Applications.GoodsReceives;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.PurchaseOrderItems;
-using Indotalent.Applications.PurchaseOrders;
-using Indotalent.Applications.Warehouses;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+﻿using GodwitWHMS.Applications.GoodsReceives;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.PurchaseOrderItems;
+using GodwitWHMS.Applications.PurchaseOrders;
+using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoGoodsReceive
     {

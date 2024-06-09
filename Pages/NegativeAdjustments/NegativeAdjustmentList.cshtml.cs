@@ -1,9 +1,9 @@
-using Indotalent.Infrastructures.Extensions;
+using GodwitWHMS.Infrastructures.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Pages.NegativeAdjustments
+namespace GodwitWHMS.Pages.NegativeAdjustments
 {
     [Authorize]
     public class NegativeAdjustmentListModel : PageModel

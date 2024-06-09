@@ -1,16 +1,16 @@
 using AutoMapper;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.VendorContacts;
-using Indotalent.Applications.Vendors;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.VendorContacts;
+using GodwitWHMS.Applications.Vendors;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.VendorContacts
+namespace GodwitWHMS.Pages.VendorContacts
 {
     [Authorize]
     public class VendorContactFormModel : PageModel

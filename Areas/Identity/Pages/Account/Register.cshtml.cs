@@ -1,8 +1,8 @@
 ﻿#nullable disable
 
-using Indotalent.Applications.Companies;
-using Indotalent.AppSettings;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.AppSettings;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -15,7 +15,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
 
-namespace Indotalent.Areas.Identity.Pages.Account
+namespace GodwitWHMS.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel

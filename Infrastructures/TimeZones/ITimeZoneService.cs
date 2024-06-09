@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Indotalent.Infrastructures.TimeZones
+namespace GodwitWHMS.Infrastructures.TimeZones
 {
     public interface ITimeZoneService
     {

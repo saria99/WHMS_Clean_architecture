@@ -1,6 +1,6 @@
 ﻿#nullable disable
 
-namespace Indotalent.Infrastructures.Docs
+namespace GodwitWHMS.Infrastructures.Docs
 {
     public class FileDocument
     {

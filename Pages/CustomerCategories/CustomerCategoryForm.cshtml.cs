@@ -1,13 +1,13 @@
 using AutoMapper;
-using Indotalent.Applications.CustomerCategories;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.CustomerCategories;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.CustomerCategories
+namespace GodwitWHMS.Pages.CustomerCategories
 {
     [Authorize]
     public class CustomerCategoryFormModel : PageModel

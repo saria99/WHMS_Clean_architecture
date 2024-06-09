@@ -1,13 +1,13 @@
 using AutoMapper;
-using Indotalent.Applications.Warehouses;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.Warehouses
+namespace GodwitWHMS.Pages.Warehouses
 {
     [Authorize]
     public class WarehouseFormModel : PageModel

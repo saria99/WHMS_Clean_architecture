@@ -1,9 +1,9 @@
-﻿using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.VendorContacts;
-using Indotalent.Applications.Vendors;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.VendorContacts;
+using GodwitWHMS.Applications.Vendors;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoVendorContact
     {

@@ -1,8 +1,8 @@
-﻿using Indotalent.Data;
-using Indotalent.Infrastructures.Repositories;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Repositories;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Applications.StockCounts
+namespace GodwitWHMS.Applications.StockCounts
 {
     public class StockCountService : Repository<StockCount>
     {

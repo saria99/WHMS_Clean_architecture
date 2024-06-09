@@ -1,19 +1,19 @@
 using AutoMapper;
-using Indotalent.Applications.AdjustmentPluss;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.Products;
-using Indotalent.Applications.Warehouses;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+using GodwitWHMS.Applications.AdjustmentPluss;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.Products;
+using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.PositiveAdjustments
+namespace GodwitWHMS.Pages.PositiveAdjustments
 {
     [Authorize]
     public class PositiveAdjustmentFormModel : PageModel

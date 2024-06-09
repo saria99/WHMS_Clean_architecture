@@ -1,9 +1,9 @@
-﻿using Indotalent.Applications.LogAnalytics;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.LogAnalytics;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class LogAnalyticController : ODataController
     {

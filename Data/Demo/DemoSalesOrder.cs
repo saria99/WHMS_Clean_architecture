@@ -1,13 +1,13 @@
-﻿using Indotalent.Applications.Customers;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.Products;
-using Indotalent.Applications.SalesOrderItems;
-using Indotalent.Applications.SalesOrders;
-using Indotalent.Applications.Taxes;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+﻿using GodwitWHMS.Applications.Customers;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.Products;
+using GodwitWHMS.Applications.SalesOrderItems;
+using GodwitWHMS.Applications.SalesOrders;
+using GodwitWHMS.Applications.Taxes;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoSalesOrder
     {

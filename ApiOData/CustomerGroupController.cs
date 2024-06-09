@@ -1,9 +1,9 @@
-﻿using Indotalent.Applications.CustomerGroups;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.CustomerGroups;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class CustomerGroupController : ODataController
     {

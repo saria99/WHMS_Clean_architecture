@@ -1,4 +1,4 @@
-﻿namespace Indotalent.AppSettings
+﻿namespace GodwitWHMS.AppSettings
 {
     public class ApplicationConfiguration
     {

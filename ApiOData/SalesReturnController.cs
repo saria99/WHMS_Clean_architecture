@@ -1,10 +1,10 @@
-﻿using Indotalent.Applications.SalesReturns;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.SalesReturns;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class SalesReturnController : ODataController
     {

@@ -1,9 +1,9 @@
-﻿using Indotalent.Data;
-using Indotalent.Infrastructures.Repositories;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Repositories;
+using GodwitWHMS.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Applications.Companies
+namespace GodwitWHMS.Applications.Companies
 {
     public class CompanyService : Repository<Company>
     {

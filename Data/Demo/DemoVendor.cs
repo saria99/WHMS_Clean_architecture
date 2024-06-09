@@ -1,10 +1,10 @@
-﻿using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.VendorCategories;
-using Indotalent.Applications.VendorGroups;
-using Indotalent.Applications.Vendors;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.VendorCategories;
+using GodwitWHMS.Applications.VendorGroups;
+using GodwitWHMS.Applications.Vendors;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoVendor
     {

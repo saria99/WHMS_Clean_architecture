@@ -1,6 +1,6 @@
-﻿using Indotalent.Applications.LogErrors;
+﻿using GodwitWHMS.Applications.LogErrors;
 
-namespace Indotalent.Infrastructures.Middlewares
+namespace GodwitWHMS.Infrastructures.Middlewares
 {
     public class GlobalErrorHandlingMiddleware
     {

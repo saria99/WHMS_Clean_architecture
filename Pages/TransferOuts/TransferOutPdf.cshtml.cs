@@ -1,12 +1,12 @@
-using Indotalent.Applications.Companies;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.TransferOuts;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.TransferOuts;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Pages.TransferOuts
+namespace GodwitWHMS.Pages.TransferOuts
 {
     [AllowAnonymous]
     public class TransferOutPdfModel : PageModel

@@ -1,10 +1,10 @@
-using Indotalent;
-using Indotalent.AppSettings;
-using Indotalent.Data;
-using Indotalent.Infrastructures.Middlewares;
-using Indotalent.Infrastructures.ODatas;
-using Indotalent.Infrastructures.Pdfs;
-using Indotalent.Models.Entities;
+using GodwitWHMS;
+using GodwitWHMS.AppSettings;
+using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Middlewares;
+using GodwitWHMS.Infrastructures.ODatas;
+using GodwitWHMS.Infrastructures.Pdfs;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;

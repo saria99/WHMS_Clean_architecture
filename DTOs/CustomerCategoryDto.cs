@@ -1,4 +1,4 @@
-﻿namespace Indotalent.DTOs
+﻿namespace GodwitWHMS.DTOs
 {
     public class CustomerCategoryDto
     {

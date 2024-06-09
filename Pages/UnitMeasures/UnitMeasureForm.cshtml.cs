@@ -1,13 +1,13 @@
 using AutoMapper;
-using Indotalent.Applications.UnitMeasures;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.UnitMeasures;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.UnitMeasures
+namespace GodwitWHMS.Pages.UnitMeasures
 {
     [Authorize]
     public class UnitMeasureFormModel : PageModel

@@ -1,10 +1,10 @@
 using AutoMapper;
-using Indotalent.Applications.ApplicationUsers;
-using Indotalent.Applications.Companies;
-using Indotalent.AppSettings;
-using Indotalent.Infrastructures.Countries;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.ApplicationUsers;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.AppSettings;
+using GodwitWHMS.Infrastructures.Countries;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Options;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.UserProfiles
+namespace GodwitWHMS.Pages.UserProfiles
 {
     [Authorize]
     public class UserFormModel : PageModel

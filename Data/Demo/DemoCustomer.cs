@@ -1,10 +1,10 @@
-﻿using Indotalent.Applications.CustomerCategories;
-using Indotalent.Applications.CustomerGroups;
-using Indotalent.Applications.Customers;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.CustomerCategories;
+using GodwitWHMS.Applications.CustomerGroups;
+using GodwitWHMS.Applications.Customers;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoCustomer
     {

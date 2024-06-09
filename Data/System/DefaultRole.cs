@@ -1,10 +1,10 @@
-﻿using Indotalent.AppSettings;
-using Indotalent.Infrastructures.Menus;
-using Indotalent.Pages.Shared.Dashmin;
+﻿using GodwitWHMS.AppSettings;
+using GodwitWHMS.Infrastructures.Menus;
+using GodwitWHMS.Pages.Shared.Dashmin;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 
-namespace Indotalent.Data.System
+namespace GodwitWHMS.Data.System
 {
     public static class DefaultRole
     {

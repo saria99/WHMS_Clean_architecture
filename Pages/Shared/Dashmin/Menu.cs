@@ -1,7 +1,7 @@
-﻿using Indotalent.Infrastructures.Extensions;
+﻿using GodwitWHMS.Infrastructures.Extensions;
 using Newtonsoft.Json;
 
-namespace Indotalent.Pages.Shared.Dashmin
+namespace GodwitWHMS.Pages.Shared.Dashmin
 {
     public static class Menu
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Indotalent.Models.Contracts
+namespace GodwitWHMS.Models.Contracts
 {
     public class _Base : IHasId, IHasAudit, IHasSoftDelete
     {

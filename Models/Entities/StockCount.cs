@@ -1,7 +1,7 @@
-﻿using Indotalent.Models.Contracts;
-using Indotalent.Models.Enums;
+﻿using GodwitWHMS.Models.Contracts;
+using GodwitWHMS.Models.Enums;
 
-namespace Indotalent.Models.Entities
+namespace GodwitWHMS.Models.Entities
 {
     public class StockCount : _Base
     {

@@ -1,8 +1,8 @@
-using Indotalent.Infrastructures.Extensions;
+using GodwitWHMS.Infrastructures.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Pages.NumberSequences
+namespace GodwitWHMS.Pages.NumberSequences
 {
     [Authorize]
     public class NumberSequenceListModel : PageModel

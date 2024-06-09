@@ -1,12 +1,12 @@
-using Indotalent.Applications.ApplicationUsers;
-using Indotalent.AppSettings;
-using Indotalent.Infrastructures.Extensions;
+using GodwitWHMS.Applications.ApplicationUsers;
+using GodwitWHMS.AppSettings;
+using GodwitWHMS.Infrastructures.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 
-namespace Indotalent.Pages.Users
+namespace GodwitWHMS.Pages.Users
 {
     [Authorize]
     public class ManagePermissionModel : PageModel

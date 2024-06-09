@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Globalization;
 
-namespace Indotalent.Infrastructures.Currencies
+namespace GodwitWHMS.Infrastructures.Currencies
 {
     public class CurrencyService : ICurrencyService
     {

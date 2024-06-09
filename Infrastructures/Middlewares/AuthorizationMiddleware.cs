@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
 using System.IO;
-using Indotalent.Infrastructures.Extensions;
+using GodwitWHMS.Infrastructures.Extensions;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authentication;
 
-namespace Indotalent.Infrastructures.Middlewares
+namespace GodwitWHMS.Infrastructures.Middlewares
 {
     public class AuthorizationMiddleware
     {

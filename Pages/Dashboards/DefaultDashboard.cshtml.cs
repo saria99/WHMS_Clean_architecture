@@ -1,29 +1,29 @@
-using Indotalent.Applications.AdjustmentMinuss;
-using Indotalent.Applications.AdjustmentPluss;
-using Indotalent.Applications.DeliveryOrders;
-using Indotalent.Applications.GoodsReceives;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.PurchaseOrderItems;
-using Indotalent.Applications.PurchaseOrders;
-using Indotalent.Applications.PurchaseReturns;
-using Indotalent.Applications.SalesOrderItems;
-using Indotalent.Applications.SalesOrders;
-using Indotalent.Applications.SalesReturns;
-using Indotalent.Applications.Scrappings;
-using Indotalent.Applications.StockCounts;
-using Indotalent.Applications.TransferIns;
-using Indotalent.Applications.TransferOuts;
-using Indotalent.Applications.Warehouses;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+using GodwitWHMS.Applications.AdjustmentMinuss;
+using GodwitWHMS.Applications.AdjustmentPluss;
+using GodwitWHMS.Applications.DeliveryOrders;
+using GodwitWHMS.Applications.GoodsReceives;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.PurchaseOrderItems;
+using GodwitWHMS.Applications.PurchaseOrders;
+using GodwitWHMS.Applications.PurchaseReturns;
+using GodwitWHMS.Applications.SalesOrderItems;
+using GodwitWHMS.Applications.SalesOrders;
+using GodwitWHMS.Applications.SalesReturns;
+using GodwitWHMS.Applications.Scrappings;
+using GodwitWHMS.Applications.StockCounts;
+using GodwitWHMS.Applications.TransferIns;
+using GodwitWHMS.Applications.TransferOuts;
+using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
-namespace Indotalent.Pages.Dashboards
+namespace GodwitWHMS.Pages.Dashboards
 {
     [Authorize]
     public class DefaultDashboardModel : PageModel

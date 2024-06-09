@@ -1,7 +1,7 @@
-﻿using Indotalent.Applications.CustomerCategories;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.CustomerCategories;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoCustomerCategory
     {

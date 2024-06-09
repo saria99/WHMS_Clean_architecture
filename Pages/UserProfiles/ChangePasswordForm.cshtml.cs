@@ -1,9 +1,9 @@
 using AutoMapper;
-using Indotalent.Applications.ApplicationUsers;
-using Indotalent.Applications.LogErrors;
-using Indotalent.AppSettings;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.ApplicationUsers;
+using GodwitWHMS.Applications.LogErrors;
+using GodwitWHMS.AppSettings;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.Options;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Indotalent.Pages.UserProfiles
+namespace GodwitWHMS.Pages.UserProfiles
 {
     [Authorize]
     public class ChangePasswordFormModel : PageModel

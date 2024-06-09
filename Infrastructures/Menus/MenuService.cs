@@ -1,9 +1,9 @@
-﻿using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
 
-namespace Indotalent.Infrastructures.Menus
+namespace GodwitWHMS.Infrastructures.Menus
 {
     public class MenuService
     {

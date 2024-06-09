@@ -1,4 +1,4 @@
-﻿namespace Indotalent.Infrastructures.Images
+﻿namespace GodwitWHMS.Infrastructures.Images
 {
     public interface IFileImageService
     {

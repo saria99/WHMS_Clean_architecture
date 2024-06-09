@@ -1,7 +1,7 @@
-﻿using Indotalent.Applications.Taxes;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.Taxes;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoTax
     {

@@ -1,9 +1,9 @@
-using Indotalent.Infrastructures.Pdfs;
+using GodwitWHMS.Infrastructures.Pdfs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Pages.Scrappings
+namespace GodwitWHMS.Pages.Scrappings
 {
     [AllowAnonymous]
     public class ScrappingDownloadModel : PageModel

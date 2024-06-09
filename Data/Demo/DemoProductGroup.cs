@@ -1,7 +1,7 @@
-﻿using Indotalent.Applications.ProductGroups;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.ProductGroups;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoProductGroup
     {

@@ -1,9 +1,9 @@
-﻿using Indotalent.Applications.Warehouses;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class WarehouseController : ODataController
     {

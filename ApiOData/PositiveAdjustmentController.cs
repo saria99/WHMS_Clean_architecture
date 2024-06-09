@@ -1,9 +1,9 @@
-﻿using Indotalent.Applications.AdjustmentPluss;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.AdjustmentPluss;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class PositiveAdjustmentController : ODataController
     {

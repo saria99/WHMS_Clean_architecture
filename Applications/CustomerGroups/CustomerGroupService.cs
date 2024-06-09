@@ -1,8 +1,8 @@
-﻿using Indotalent.Data;
-using Indotalent.Infrastructures.Repositories;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Repositories;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Applications.CustomerGroups
+namespace GodwitWHMS.Applications.CustomerGroups
 {
     public class CustomerGroupService : Repository<CustomerGroup>
     {

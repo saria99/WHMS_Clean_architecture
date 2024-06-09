@@ -1,8 +1,8 @@
-﻿using Indotalent.Data;
-using Indotalent.Models.Contracts;
+﻿using GodwitWHMS.Data;
+using GodwitWHMS.Models.Contracts;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Infrastructures.Repositories
+namespace GodwitWHMS.Infrastructures.Repositories
 {
     public class AuditColumnTransformer : IAuditColumnTransformer
     {

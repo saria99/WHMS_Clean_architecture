@@ -1,11 +1,11 @@
-﻿using Indotalent.Applications.SalesOrders;
-using Indotalent.Data;
-using Indotalent.Infrastructures.Repositories;
-using Indotalent.Models.Contracts;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.SalesOrders;
+using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Repositories;
+using GodwitWHMS.Models.Contracts;
+using GodwitWHMS.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Applications.SalesOrderItems
+namespace GodwitWHMS.Applications.SalesOrderItems
 {
     public class SalesOrderItemService : Repository<SalesOrderItem>
     {

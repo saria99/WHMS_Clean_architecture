@@ -1,7 +1,7 @@
-﻿using Indotalent.Data;
-using Indotalent.Models.Contracts;
+﻿using GodwitWHMS.Data;
+using GodwitWHMS.Models.Contracts;
 
-namespace Indotalent.Infrastructures.Repositories
+namespace GodwitWHMS.Infrastructures.Repositories
 {
     public interface IAuditColumnTransformer
     {

@@ -1,12 +1,12 @@
-using Indotalent.Applications.Companies;
-using Indotalent.Applications.PurchaseOrderItems;
-using Indotalent.Applications.PurchaseOrders;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.Applications.PurchaseOrderItems;
+using GodwitWHMS.Applications.PurchaseOrders;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Pages.PurchaseOrders
+namespace GodwitWHMS.Pages.PurchaseOrders
 {
     [AllowAnonymous]
     public class PurchaseOrderPdfModel : PageModel

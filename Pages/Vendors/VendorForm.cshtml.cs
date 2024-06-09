@@ -1,18 +1,18 @@
 using AutoMapper;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.VendorCategories;
-using Indotalent.Applications.VendorGroups;
-using Indotalent.Applications.Vendors;
-using Indotalent.Infrastructures.Countries;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.VendorCategories;
+using GodwitWHMS.Applications.VendorGroups;
+using GodwitWHMS.Applications.Vendors;
+using GodwitWHMS.Infrastructures.Countries;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.Vendors
+namespace GodwitWHMS.Pages.Vendors
 {
     [Authorize]
     public class VendorFormModel : PageModel

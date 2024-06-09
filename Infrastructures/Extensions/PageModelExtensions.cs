@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Infrastructures.Extensions
+namespace GodwitWHMS.Infrastructures.Extensions
 {
     public static class PageModelExtensions
     {

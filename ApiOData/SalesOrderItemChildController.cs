@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Indotalent.Applications.SalesOrderItems;
-using Indotalent.Applications.SalesOrders;
-using Indotalent.DTOs;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.SalesOrderItems;
+using GodwitWHMS.Applications.SalesOrders;
+using GodwitWHMS.DTOs;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Deltas;
 using Microsoft.AspNetCore.OData.Formatter;
@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.OData.Results;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
 
     public class SalesOrderItemChildController : ODataController

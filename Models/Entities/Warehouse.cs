@@ -1,6 +1,6 @@
-﻿using Indotalent.Models.Contracts;
+﻿using GodwitWHMS.Models.Contracts;
 
-namespace Indotalent.Models.Entities
+namespace GodwitWHMS.Models.Entities
 {
     public class Warehouse : _Base
     {

@@ -1,13 +1,13 @@
-﻿using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.Products;
-using Indotalent.Applications.PurchaseOrderItems;
-using Indotalent.Applications.PurchaseOrders;
-using Indotalent.Applications.Taxes;
-using Indotalent.Applications.Vendors;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+﻿using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.Products;
+using GodwitWHMS.Applications.PurchaseOrderItems;
+using GodwitWHMS.Applications.PurchaseOrders;
+using GodwitWHMS.Applications.Taxes;
+using GodwitWHMS.Applications.Vendors;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoPurchaseOrder
     {

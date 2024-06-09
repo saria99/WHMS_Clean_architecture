@@ -1,7 +1,7 @@
-﻿using Indotalent.Applications.UnitMeasures;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.UnitMeasures;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoUnitMeasure
     {

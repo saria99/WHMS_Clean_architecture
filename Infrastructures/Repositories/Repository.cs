@@ -1,9 +1,9 @@
-﻿using Indotalent.Data;
-using Indotalent.Models.Contracts;
+﻿using GodwitWHMS.Data;
+using GodwitWHMS.Models.Contracts;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
-namespace Indotalent.Infrastructures.Repositories
+namespace GodwitWHMS.Infrastructures.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class, IHasId, IHasAudit, IHasSoftDelete
     {

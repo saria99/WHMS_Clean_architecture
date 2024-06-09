@@ -1,8 +1,8 @@
-﻿using Indotalent.Data;
-using Indotalent.Infrastructures.Repositories;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Repositories;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Applications.GoodsReceives
+namespace GodwitWHMS.Applications.GoodsReceives
 {
     public class GoodsReceiveService : Repository<GoodsReceive>
     {

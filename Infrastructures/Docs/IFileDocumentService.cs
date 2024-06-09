@@ -1,4 +1,4 @@
-﻿namespace Indotalent.Infrastructures.Docs
+﻿namespace GodwitWHMS.Infrastructures.Docs
 {
     public interface IFileDocumentService
     {

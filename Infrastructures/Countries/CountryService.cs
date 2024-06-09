@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Globalization;
 
-namespace Indotalent.Infrastructures.Countries
+namespace GodwitWHMS.Infrastructures.Countries
 {
     public class CountryService : ICountryService
     {

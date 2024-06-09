@@ -1,9 +1,9 @@
-using Indotalent.Infrastructures.Pdfs;
+using GodwitWHMS.Infrastructures.Pdfs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Pages.TransferOuts
+namespace GodwitWHMS.Pages.TransferOuts
 {
     [AllowAnonymous]
     public class TransferOutDownloadModel : PageModel

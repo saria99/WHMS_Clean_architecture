@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Indotalent.Infrastructures.Currencies
+namespace GodwitWHMS.Infrastructures.Currencies
 {
     public interface ICurrencyService
     {

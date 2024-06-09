@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Indotalent.Applications.PurchaseOrderItems;
-using Indotalent.Applications.PurchaseOrders;
-using Indotalent.DTOs;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.PurchaseOrderItems;
+using GodwitWHMS.Applications.PurchaseOrders;
+using GodwitWHMS.DTOs;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Deltas;
 using Microsoft.AspNetCore.OData.Formatter;
@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.OData.Results;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
 
     public class PurchaseOrderItemChildController : ODataController

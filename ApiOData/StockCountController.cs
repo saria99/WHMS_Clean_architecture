@@ -1,10 +1,10 @@
-﻿using Indotalent.Applications.StockCounts;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.StockCounts;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class StockCountController : ODataController
     {

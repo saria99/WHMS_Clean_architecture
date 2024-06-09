@@ -1,19 +1,19 @@
-﻿using Indotalent.Applications.ApplicationUsers;
-using Indotalent.Applications.Companies;
-using Indotalent.AppSettings;
-using Indotalent.Data.Demo;
-using Indotalent.Data.System;
-using Indotalent.Infrastructures.Countries;
-using Indotalent.Infrastructures.Currencies;
-using Indotalent.Infrastructures.Images;
-using Indotalent.Infrastructures.Menus;
-using Indotalent.Infrastructures.TimeZones;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.ApplicationUsers;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.AppSettings;
+using GodwitWHMS.Data.Demo;
+using GodwitWHMS.Data.System;
+using GodwitWHMS.Infrastructures.Countries;
+using GodwitWHMS.Infrastructures.Currencies;
+using GodwitWHMS.Infrastructures.Images;
+using GodwitWHMS.Infrastructures.Menus;
+using GodwitWHMS.Infrastructures.TimeZones;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace Indotalent.Data
+namespace GodwitWHMS.Data
 {
     public static class DbInitializer
     {

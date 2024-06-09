@@ -1,13 +1,13 @@
 using AutoMapper;
-using Indotalent.Applications.Taxes;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Taxes;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.Taxes
+namespace GodwitWHMS.Pages.Taxes
 {
     [Authorize]
     public class TaxFormModel : PageModel

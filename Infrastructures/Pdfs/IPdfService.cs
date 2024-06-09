@@ -1,4 +1,4 @@
-﻿namespace Indotalent.Infrastructures.Pdfs
+﻿namespace GodwitWHMS.Infrastructures.Pdfs
 {
     public interface IPdfService
     {

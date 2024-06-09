@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Query.Validator;
 
-namespace Indotalent.Infrastructures.ODatas
+namespace GodwitWHMS.Infrastructures.ODatas
 {
     public class SFODataQueryValidator : ODataQueryValidator
     {

@@ -1,12 +1,12 @@
-using Indotalent.Applications.Companies;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.Scrappings;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.Scrappings;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Pages.Scrappings
+namespace GodwitWHMS.Pages.Scrappings
 {
     [AllowAnonymous]
     public class ScrappingPdfModel : PageModel

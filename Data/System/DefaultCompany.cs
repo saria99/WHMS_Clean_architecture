@@ -1,10 +1,10 @@
-﻿using Indotalent.Applications.Companies;
-using Indotalent.Infrastructures.Countries;
-using Indotalent.Infrastructures.Currencies;
-using Indotalent.Infrastructures.TimeZones;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.Infrastructures.Countries;
+using GodwitWHMS.Infrastructures.Currencies;
+using GodwitWHMS.Infrastructures.TimeZones;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.System
+namespace GodwitWHMS.Data.System
 {
     public static class DefaultCompany
     {

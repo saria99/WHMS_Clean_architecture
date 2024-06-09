@@ -1,14 +1,14 @@
 using AutoMapper;
-using Indotalent.Applications.ApplicationUsers;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Infrastructures.Images;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.ApplicationUsers;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Infrastructures.Images;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Pages.Users
+namespace GodwitWHMS.Pages.Users
 {
     [Authorize]
     public class ChangeAvatarFormModel : PageModel

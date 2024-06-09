@@ -1,6 +1,6 @@
 ﻿#nullable disable
 
-namespace Indotalent.Infrastructures.Images
+namespace GodwitWHMS.Infrastructures.Images
 {
     public class FileImage
     {

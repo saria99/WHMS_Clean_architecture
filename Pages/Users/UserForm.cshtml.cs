@@ -1,13 +1,13 @@
 using AutoMapper;
-using Indotalent.Applications.ApplicationUsers;
-using Indotalent.Applications.Companies;
-using Indotalent.AppSettings;
-using Indotalent.Infrastructures.Countries;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Infrastructures.Menus;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
-using Indotalent.Pages.Shared.Dashmin;
+using GodwitWHMS.Applications.ApplicationUsers;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.AppSettings;
+using GodwitWHMS.Infrastructures.Countries;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Infrastructures.Menus;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
+using GodwitWHMS.Pages.Shared.Dashmin;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -19,7 +19,7 @@ using System.ComponentModel;
 using System.Security.Claims;
 using System.Text;
 
-namespace Indotalent.Pages.Users
+namespace GodwitWHMS.Pages.Users
 {
     [Authorize]
     public class UserFormModel : PageModel

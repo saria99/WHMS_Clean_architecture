@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Indotalent.Infrastructures.Countries
+namespace GodwitWHMS.Infrastructures.Countries
 {
     public interface ICountryService
     {

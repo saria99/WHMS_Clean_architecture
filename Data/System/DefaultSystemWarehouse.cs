@@ -1,7 +1,7 @@
-﻿using Indotalent.Applications.Warehouses;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.System
+namespace GodwitWHMS.Data.System
 {
     public static class DefaultSystemWarehouse
     {

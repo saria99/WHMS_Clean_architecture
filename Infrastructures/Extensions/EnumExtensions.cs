@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Indotalent.Infrastructures.Extensions
+namespace GodwitWHMS.Infrastructures.Extensions
 {
     public static class EnumExtensions
     {

@@ -1,12 +1,12 @@
-using Indotalent.Applications.Companies;
-using Indotalent.Applications.DeliveryOrders;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.Applications.DeliveryOrders;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Pages.DeliveryOrders
+namespace GodwitWHMS.Pages.DeliveryOrders
 {
     [AllowAnonymous]
     public class DeliveryOrderPdfModel : PageModel

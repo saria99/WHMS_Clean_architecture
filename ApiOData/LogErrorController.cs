@@ -1,9 +1,9 @@
-﻿using Indotalent.Applications.LogErrors;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.LogErrors;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class LogErrorController : ODataController
     {

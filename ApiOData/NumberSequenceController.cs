@@ -1,9 +1,9 @@
-﻿using Indotalent.Applications.NumberSequences;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class NumberSequenceController : ODataController
     {

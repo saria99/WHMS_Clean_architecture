@@ -1,12 +1,12 @@
-using Indotalent.Applications.Companies;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.PurchaseReturns;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.Companies;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.PurchaseReturns;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.Pages.PurchaseReturns
+namespace GodwitWHMS.Pages.PurchaseReturns
 {
     [AllowAnonymous]
     public class PurchaseReturnPdfModel : PageModel

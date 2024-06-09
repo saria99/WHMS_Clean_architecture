@@ -1,13 +1,13 @@
 using AutoMapper;
-using Indotalent.Applications.GoodsReceives;
-using Indotalent.Applications.InventoryTransactions;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.Products;
-using Indotalent.Applications.PurchaseReturns;
-using Indotalent.Applications.Warehouses;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+using GodwitWHMS.Applications.GoodsReceives;
+using GodwitWHMS.Applications.InventoryTransactions;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.Products;
+using GodwitWHMS.Applications.PurchaseReturns;
+using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.PurchaseReturns
+namespace GodwitWHMS.Pages.PurchaseReturns
 {
     [Authorize]
     public class PurchaseReturnFormModel : PageModel

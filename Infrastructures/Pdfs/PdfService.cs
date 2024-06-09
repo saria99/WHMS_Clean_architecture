@@ -1,7 +1,7 @@
 ﻿using WkHtmlToPdfDotNet;
 using WkHtmlToPdfDotNet.Contracts;
 
-namespace Indotalent.Infrastructures.Pdfs
+namespace GodwitWHMS.Infrastructures.Pdfs
 {
     public class PdfService : IPdfService
     {

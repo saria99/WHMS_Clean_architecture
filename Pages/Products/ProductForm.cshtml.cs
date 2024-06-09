@@ -1,17 +1,17 @@
 using AutoMapper;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.ProductGroups;
-using Indotalent.Applications.Products;
-using Indotalent.Applications.UnitMeasures;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.ProductGroups;
+using GodwitWHMS.Applications.Products;
+using GodwitWHMS.Applications.UnitMeasures;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.Products
+namespace GodwitWHMS.Pages.Products
 {
     [Authorize]
     public class ProductFormModel : PageModel

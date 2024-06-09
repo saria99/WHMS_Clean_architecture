@@ -1,7 +1,7 @@
-﻿using Indotalent.Applications.CustomerGroups;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.CustomerGroups;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoCustomerGroup
     {

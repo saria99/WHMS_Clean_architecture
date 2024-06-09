@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Indotalent.Models.Enums
+namespace GodwitWHMS.Models.Enums
 {
     public enum ScrappingStatus
     {

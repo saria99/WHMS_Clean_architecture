@@ -1,13 +1,13 @@
 using AutoMapper;
-using Indotalent.Applications.VendorGroups;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.VendorGroups;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.VendorGroups
+namespace GodwitWHMS.Pages.VendorGroups
 {
     [Authorize]
     public class VendorGroupFormModel : PageModel

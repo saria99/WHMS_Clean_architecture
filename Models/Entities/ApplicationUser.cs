@@ -1,9 +1,9 @@
-﻿using Indotalent.Models.Contracts;
-using Indotalent.Models.Enums;
+﻿using GodwitWHMS.Models.Contracts;
+using GodwitWHMS.Models.Enums;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Indotalent.Models.Entities
+namespace GodwitWHMS.Models.Entities
 {
     public class ApplicationUser : IdentityUser, IHasAudit, IHasSoftDelete
     {

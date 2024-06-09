@@ -1,19 +1,19 @@
 using AutoMapper;
-using Indotalent.Applications.Customers;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.Products;
-using Indotalent.Applications.SalesOrders;
-using Indotalent.Applications.Taxes;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
-using Indotalent.Models.Enums;
+using GodwitWHMS.Applications.Customers;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.Products;
+using GodwitWHMS.Applications.SalesOrders;
+using GodwitWHMS.Applications.Taxes;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Models.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.SalesOrders
+namespace GodwitWHMS.Pages.SalesOrders
 {
     [Authorize]
     public class SalesOrderFormModel : PageModel

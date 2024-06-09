@@ -1,10 +1,10 @@
-﻿using Indotalent.Data;
-using Indotalent.Infrastructures.Repositories;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Repositories;
+using GodwitWHMS.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
-namespace Indotalent.Applications.LogSessions
+namespace GodwitWHMS.Applications.LogSessions
 {
     public class LogSessionService : Repository<LogSession>
     {

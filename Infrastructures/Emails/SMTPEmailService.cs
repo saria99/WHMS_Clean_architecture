@@ -1,10 +1,10 @@
-﻿using Indotalent.AppSettings;
+﻿using GodwitWHMS.AppSettings;
 using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Options;
 using MimeKit;
 
-namespace Indotalent.Infrastructures.Emails
+namespace GodwitWHMS.Infrastructures.Emails
 {
     public class SMTPEmailService : IEmailSender
     {

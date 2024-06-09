@@ -1,7 +1,7 @@
-﻿using Indotalent.Applications.VendorGroups;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.VendorGroups;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoVendorGroup
     {

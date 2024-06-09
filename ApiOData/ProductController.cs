@@ -1,10 +1,10 @@
-﻿using Indotalent.Applications.Products;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.Products;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class ProductController : ODataController
     {

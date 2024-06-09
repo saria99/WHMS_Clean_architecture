@@ -1,16 +1,16 @@
 using AutoMapper;
-using Indotalent.Applications.CustomerContacts;
-using Indotalent.Applications.Customers;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.Infrastructures.Extensions;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.CustomerContacts;
+using GodwitWHMS.Applications.Customers;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Infrastructures.Extensions;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel;
 
-namespace Indotalent.Pages.CustomerContacts
+namespace GodwitWHMS.Pages.CustomerContacts
 {
     [Authorize]
     public class CustomerContactFormModel : PageModel

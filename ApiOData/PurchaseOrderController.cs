@@ -1,5 +1,5 @@
-﻿using Indotalent.Applications.PurchaseOrders;
-using Indotalent.DTOs;
+﻿using GodwitWHMS.Applications.PurchaseOrders;
+using GodwitWHMS.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Formatter;
 using Microsoft.AspNetCore.OData.Query;
@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.OData.Results;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
     public class PurchaseOrderController : ODataController
     {

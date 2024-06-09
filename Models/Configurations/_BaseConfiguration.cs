@@ -1,8 +1,8 @@
-﻿using Indotalent.Models.Contracts;
+﻿using GodwitWHMS.Models.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Indotalent.Models.Configurations
+namespace GodwitWHMS.Models.Configurations
 {
     public abstract class _BaseConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : class, IHasId, IHasAudit, IHasSoftDelete
     {

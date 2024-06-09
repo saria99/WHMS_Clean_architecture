@@ -1,6 +1,6 @@
-﻿using Indotalent.Data;
+﻿using GodwitWHMS.Data;
 
-namespace Indotalent.Infrastructures.Images
+namespace GodwitWHMS.Infrastructures.Images
 {
     public class FileImageService : IFileImageService
     {

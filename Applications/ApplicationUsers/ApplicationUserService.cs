@@ -1,11 +1,11 @@
-﻿using Indotalent.Data;
-using Indotalent.Infrastructures.Repositories;
-using Indotalent.Models.Contracts;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Repositories;
+using GodwitWHMS.Models.Contracts;
+using GodwitWHMS.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
-namespace Indotalent.Applications.ApplicationUsers
+namespace GodwitWHMS.Applications.ApplicationUsers
 {
     public class ApplicationUserService
     {

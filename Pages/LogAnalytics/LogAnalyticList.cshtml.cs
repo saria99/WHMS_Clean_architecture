@@ -1,8 +1,8 @@
-using Indotalent.Infrastructures.Extensions;
+using GodwitWHMS.Infrastructures.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Pages.LogAnalytics
+namespace GodwitWHMS.Pages.LogAnalytics
 {
     [Authorize]
     public class LogAnalyticListModel : PageModel

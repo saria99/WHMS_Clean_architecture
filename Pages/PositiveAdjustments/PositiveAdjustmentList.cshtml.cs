@@ -1,9 +1,9 @@
-using Indotalent.Infrastructures.Extensions;
+using GodwitWHMS.Infrastructures.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Indotalent.Pages.PositiveAdjustments
+namespace GodwitWHMS.Pages.PositiveAdjustments
 {
     [Authorize]
     public class PositiveAdjustmentListModel : PageModel

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Indotalent.Applications.CustomerContacts;
-using Indotalent.Applications.NumberSequences;
-using Indotalent.DTOs;
-using Indotalent.Models.Entities;
+using GodwitWHMS.Applications.CustomerContacts;
+using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.DTOs;
+using GodwitWHMS.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Deltas;
 using Microsoft.AspNetCore.OData.Formatter;
@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Results;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 
-namespace Indotalent.ApiOData
+namespace GodwitWHMS.ApiOData
 {
 
     public class CustomerContactChildController : ODataController

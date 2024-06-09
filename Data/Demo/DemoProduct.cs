@@ -1,10 +1,10 @@
-﻿using Indotalent.Applications.NumberSequences;
-using Indotalent.Applications.ProductGroups;
-using Indotalent.Applications.Products;
-using Indotalent.Applications.UnitMeasures;
-using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Applications.NumberSequences;
+using GodwitWHMS.Applications.ProductGroups;
+using GodwitWHMS.Applications.Products;
+using GodwitWHMS.Applications.UnitMeasures;
+using GodwitWHMS.Models.Entities;
 
-namespace Indotalent.Data.Demo
+namespace GodwitWHMS.Data.Demo
 {
     public static class DemoProduct
     {

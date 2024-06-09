@@ -1,4 +1,4 @@
-﻿namespace Indotalent.Models.Contracts
+﻿namespace GodwitWHMS.Models.Contracts
 {
     public interface IHasSoftDelete
     {

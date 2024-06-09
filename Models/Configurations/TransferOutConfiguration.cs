@@ -1,8 +1,8 @@
-﻿using Indotalent.Models.Entities;
+﻿using GodwitWHMS.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Indotalent.Models.Configurations
+namespace GodwitWHMS.Models.Configurations
 {
     public class TransferOutConfiguration : _BaseConfiguration<TransferOut>
     {
