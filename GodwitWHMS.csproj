@@ -6,6 +6,12 @@
     <UserSecretsId>aspnet-Indotalent-b92680c3-3300-4a79-b996-d570e9f89f5d</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="GodwitWHMS.Domain\**" />
+    <Content Remove="GodwitWHMS.Domain\**" />
+    <EmbeddedResource Remove="GodwitWHMS.Domain\**" />
+    <None Remove="GodwitWHMS.Domain\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="DeviceDetector.NET" Version="6.3.0" />
     <PackageReference Include="Haukcode.WkHtmlToPdfDotNet" Version="1.5.86" />
