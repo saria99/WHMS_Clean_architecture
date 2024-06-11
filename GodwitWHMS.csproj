@@ -3,7 +3,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-Indotalent-b92680c3-3300-4a79-b996-d570e9f89f5d</UserSecretsId>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <UserSecretsId>aspnet-Indotalent-b92680c3-3300-4a79-b996-d570e9f89f5d</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="GodwitWHMS.Domain\**" />
@@ -29,6 +30,6 @@
     <!--<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.2.5" />-->
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="GodwitWHMS.Domain\GodwitWHMS.Domain.csproj" />
+    <ProjectReference Include="src\GodwitWHMS.Domain\GodwitWHMS.Domain.csproj" />
   </ItemGroup>
 </Project>
