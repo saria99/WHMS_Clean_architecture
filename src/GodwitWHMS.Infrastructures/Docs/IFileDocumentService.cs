@@ -1,4 +1,6 @@
-﻿namespace GodwitWHMS.Infrastructures.Docs
+﻿using Microsoft.AspNetCore.Http;
+
+namespace GodwitWHMS.Infrastructures.Docs
 {
     public interface IFileDocumentService
     {

@@ -1,4 +1,6 @@
-﻿namespace GodwitWHMS.Infrastructures.Images
+﻿using Microsoft.AspNetCore.Http;
+
+namespace GodwitWHMS.Infrastructures.Images
 {
     public interface IFileImageService
     {

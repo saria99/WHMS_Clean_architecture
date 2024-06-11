@@ -5,7 +5,7 @@ using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace GodwitWHMS.Data
+namespace GodwitWHMS.Infrastructures.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

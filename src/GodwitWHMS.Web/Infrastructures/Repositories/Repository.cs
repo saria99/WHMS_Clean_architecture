@@ -1,5 +1,5 @@
-﻿using GodwitWHMS.Data;
-using GodwitWHMS.Domain.Models.Contracts;
+﻿using GodwitWHMS.Domain.Models.Contracts;
+using GodwitWHMS.Infrastructures.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 

@@ -1,5 +1,5 @@
 ﻿using GodwitWHMS.Applications.SalesOrders;
-using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Data;
 using GodwitWHMS.Infrastructures.Repositories;
 using GodwitWHMS.Domain.Models.Contracts;
 using GodwitWHMS.Domain.Models.Entities;

@@ -1,5 +1,5 @@
 ﻿using DeviceDetectorNET;
-using GodwitWHMS.Data;
+using GodwitWHMS.Infrastructures.Data;
 using GodwitWHMS.Infrastructures.Repositories;
 using GodwitWHMS.Domain.Models.Entities;
 using System.Security.Claims;

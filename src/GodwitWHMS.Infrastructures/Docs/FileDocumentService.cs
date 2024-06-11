@@ -1,4 +1,5 @@
-﻿using GodwitWHMS.Data;
+﻿using GodwitWHMS.Infrastructures.Data;
+using Microsoft.AspNetCore.Http;
 
 namespace GodwitWHMS.Infrastructures.Docs
 {
