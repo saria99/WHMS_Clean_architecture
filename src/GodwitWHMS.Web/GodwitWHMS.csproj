@@ -15,7 +15,6 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="DeviceDetector.NET" Version="6.3.0" />
-    <PackageReference Include="Haukcode.WkHtmlToPdfDotNet" Version="1.5.86" />
     <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.0" />
     <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302" />
     <PackageReference Include="MimeKit" Version="4.3.0" />
@@ -31,5 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GodwitWHMS.Domain\GodwitWHMS.Domain.csproj" />
+    <ProjectReference Include="..\GodwitWHMS.Infrastructures\GodwitWHMS.Infrastructures.csproj" />
   </ItemGroup>
 </Project>
