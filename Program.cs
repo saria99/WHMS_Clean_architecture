@@ -4,7 +4,7 @@ using GodwitWHMS.Data;
 using GodwitWHMS.Infrastructures.Middlewares;
 using GodwitWHMS.Infrastructures.ODatas;
 using GodwitWHMS.Infrastructures.Pdfs;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;

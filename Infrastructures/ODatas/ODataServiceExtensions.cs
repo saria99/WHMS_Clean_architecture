@@ -1,4 +1,4 @@
-﻿using GodwitWHMS.DTOs;
+﻿using GodwitWHMS.Domain.DTOs;
 using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.OData.Query.Validator;
 using Microsoft.OData.ModelBuilder;

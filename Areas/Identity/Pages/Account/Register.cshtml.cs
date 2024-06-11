@@ -2,7 +2,7 @@
 
 using GodwitWHMS.Applications.Companies;
 using GodwitWHMS.AppSettings;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

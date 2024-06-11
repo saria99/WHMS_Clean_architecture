@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using GodwitWHMS.Applications.ApplicationUsers;
 using GodwitWHMS.Applications.NumberSequences;
-using GodwitWHMS.DTOs;
+using GodwitWHMS.Domain.DTOs;
 using GodwitWHMS.Infrastructures.Menus;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Deltas;

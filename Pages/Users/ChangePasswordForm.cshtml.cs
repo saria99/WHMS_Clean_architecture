@@ -2,7 +2,7 @@ using AutoMapper;
 using GodwitWHMS.Applications.ApplicationUsers;
 using GodwitWHMS.AppSettings;
 using GodwitWHMS.Infrastructures.Extensions;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

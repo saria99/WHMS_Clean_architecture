@@ -2,7 +2,7 @@
 using GodwitWHMS.Applications.CustomerGroups;
 using GodwitWHMS.Applications.Customers;
 using GodwitWHMS.Applications.NumberSequences;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 
 namespace GodwitWHMS.Data.Demo
 {

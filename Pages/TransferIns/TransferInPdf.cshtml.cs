@@ -1,7 +1,7 @@
 using GodwitWHMS.Applications.Companies;
 using GodwitWHMS.Applications.InventoryTransactions;
 using GodwitWHMS.Applications.TransferIns;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;

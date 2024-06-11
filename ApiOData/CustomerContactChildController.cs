@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using GodwitWHMS.Applications.CustomerContacts;
 using GodwitWHMS.Applications.NumberSequences;
-using GodwitWHMS.DTOs;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.DTOs;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Deltas;
 using Microsoft.AspNetCore.OData.Formatter;

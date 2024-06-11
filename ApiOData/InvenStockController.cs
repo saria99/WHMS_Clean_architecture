@@ -1,5 +1,5 @@
 ﻿using GodwitWHMS.Applications.InventoryTransactions;
-using GodwitWHMS.DTOs;
+using GodwitWHMS.Domain.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +23,7 @@ namespace GodwitWHMS.ApiOData
                 .Include(x => x.Warehouse)
                 .Include(x => x.Product)
                 .Where(x =>
-                    x.Status >= Models.Enums.InventoryTransactionStatus.Confirmed &&
+                    x.Status >= Domain.Models.Enums.InventoryTransactionStatus.Confirmed &&
                     x.Warehouse!.SystemWarehouse == false &&
                     x.Product!.Physical == true
                 )

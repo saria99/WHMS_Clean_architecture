@@ -4,7 +4,7 @@ using GodwitWHMS.Infrastructures.Countries;
 using GodwitWHMS.Infrastructures.Currencies;
 using GodwitWHMS.Infrastructures.Extensions;
 using GodwitWHMS.Infrastructures.TimeZones;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

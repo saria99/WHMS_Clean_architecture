@@ -1,9 +1,9 @@
 ﻿using GodwitWHMS.Applications.Warehouses;
 using GodwitWHMS.Data;
 using GodwitWHMS.Infrastructures.Repositories;
-using GodwitWHMS.Models.Contracts;
-using GodwitWHMS.Models.Entities;
-using GodwitWHMS.Models.Enums;
+using GodwitWHMS.Domain.Models.Contracts;
+using GodwitWHMS.Domain.Models.Entities;
+using GodwitWHMS.Domain.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace GodwitWHMS.Applications.InventoryTransactions

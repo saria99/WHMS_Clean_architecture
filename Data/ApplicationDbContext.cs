@@ -1,7 +1,7 @@
 ﻿using GodwitWHMS.Infrastructures.Docs;
 using GodwitWHMS.Infrastructures.Images;
-using GodwitWHMS.Models.Configurations;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Configurations;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

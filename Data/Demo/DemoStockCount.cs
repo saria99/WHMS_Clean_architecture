@@ -3,8 +3,8 @@ using GodwitWHMS.Applications.NumberSequences;
 using GodwitWHMS.Applications.Products;
 using GodwitWHMS.Applications.StockCounts;
 using GodwitWHMS.Applications.Warehouses;
-using GodwitWHMS.Models.Entities;
-using GodwitWHMS.Models.Enums;
+using GodwitWHMS.Domain.Models.Entities;
+using GodwitWHMS.Domain.Models.Enums;
 
 namespace GodwitWHMS.Data.Demo
 {

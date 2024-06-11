@@ -1,7 +1,7 @@
 ﻿using GodwitWHMS.Applications.CustomerContacts;
 using GodwitWHMS.Applications.Customers;
 using GodwitWHMS.Applications.NumberSequences;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 
 namespace GodwitWHMS.Data.Demo
 {

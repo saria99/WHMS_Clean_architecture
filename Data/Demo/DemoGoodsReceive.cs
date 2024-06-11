@@ -4,8 +4,8 @@ using GodwitWHMS.Applications.NumberSequences;
 using GodwitWHMS.Applications.PurchaseOrderItems;
 using GodwitWHMS.Applications.PurchaseOrders;
 using GodwitWHMS.Applications.Warehouses;
-using GodwitWHMS.Models.Entities;
-using GodwitWHMS.Models.Enums;
+using GodwitWHMS.Domain.Models.Entities;
+using GodwitWHMS.Domain.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace GodwitWHMS.Data.Demo

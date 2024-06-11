@@ -2,7 +2,7 @@
 using GodwitWHMS.Applications.VendorCategories;
 using GodwitWHMS.Applications.VendorGroups;
 using GodwitWHMS.Applications.Vendors;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 
 namespace GodwitWHMS.Data.Demo
 {

@@ -8,7 +8,7 @@ using GodwitWHMS.Infrastructures.Currencies;
 using GodwitWHMS.Infrastructures.Images;
 using GodwitWHMS.Infrastructures.Menus;
 using GodwitWHMS.Infrastructures.TimeZones;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;

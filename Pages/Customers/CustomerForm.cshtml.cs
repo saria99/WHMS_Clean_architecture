@@ -5,7 +5,7 @@ using GodwitWHMS.Applications.Customers;
 using GodwitWHMS.Applications.NumberSequences;
 using GodwitWHMS.Infrastructures.Countries;
 using GodwitWHMS.Infrastructures.Extensions;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

@@ -1,4 +1,4 @@
-﻿using GodwitWHMS.Models.Contracts;
+﻿using GodwitWHMS.Domain.Models.Contracts;
 
 namespace GodwitWHMS.Infrastructures.Repositories
 {

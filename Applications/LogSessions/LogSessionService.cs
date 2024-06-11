@@ -1,6 +1,6 @@
 ﻿using GodwitWHMS.Data;
 using GodwitWHMS.Infrastructures.Repositories;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 

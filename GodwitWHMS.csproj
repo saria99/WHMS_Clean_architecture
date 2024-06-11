@@ -22,4 +22,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0" />
     <!--<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.2.5" />-->
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="GodwitWHMS.Domain\GodwitWHMS.Domain.csproj" />
+  </ItemGroup>
 </Project>

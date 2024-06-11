@@ -2,7 +2,7 @@
 using GodwitWHMS.Infrastructures.Countries;
 using GodwitWHMS.Infrastructures.Currencies;
 using GodwitWHMS.Infrastructures.TimeZones;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 
 namespace GodwitWHMS.Data.System
 {

@@ -4,8 +4,8 @@ using GodwitWHMS.Applications.PurchaseOrderItems;
 using GodwitWHMS.Applications.PurchaseOrders;
 using GodwitWHMS.Applications.Taxes;
 using GodwitWHMS.Applications.Vendors;
-using GodwitWHMS.Models.Entities;
-using GodwitWHMS.Models.Enums;
+using GodwitWHMS.Domain.Models.Entities;
+using GodwitWHMS.Domain.Models.Enums;
 
 namespace GodwitWHMS.Data.Demo
 {

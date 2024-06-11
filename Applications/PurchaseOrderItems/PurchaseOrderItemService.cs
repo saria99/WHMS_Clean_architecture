@@ -1,8 +1,8 @@
 ﻿using GodwitWHMS.Applications.PurchaseOrders;
 using GodwitWHMS.Data;
 using GodwitWHMS.Infrastructures.Repositories;
-using GodwitWHMS.Models.Contracts;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Contracts;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace GodwitWHMS.Applications.PurchaseOrderItems

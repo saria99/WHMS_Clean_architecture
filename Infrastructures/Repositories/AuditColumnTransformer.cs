@@ -1,5 +1,5 @@
 ﻿using GodwitWHMS.Data;
-using GodwitWHMS.Models.Contracts;
+using GodwitWHMS.Domain.Models.Contracts;
 using Microsoft.EntityFrameworkCore;
 
 namespace GodwitWHMS.Infrastructures.Repositories

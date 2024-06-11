@@ -2,9 +2,9 @@
 using GodwitWHMS.Applications.GoodsReceives;
 using GodwitWHMS.Applications.InventoryTransactions;
 using GodwitWHMS.Applications.NumberSequences;
-using GodwitWHMS.DTOs;
-using GodwitWHMS.Models.Entities;
-using GodwitWHMS.Models.Enums;
+using GodwitWHMS.Domain.DTOs;
+using GodwitWHMS.Domain.Models.Entities;
+using GodwitWHMS.Domain.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Deltas;
 using Microsoft.AspNetCore.OData.Formatter;

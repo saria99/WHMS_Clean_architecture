@@ -3,7 +3,7 @@
 #nullable disable
 
 using GodwitWHMS.Applications.LogSessions;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

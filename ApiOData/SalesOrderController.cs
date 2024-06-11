@@ -1,5 +1,5 @@
 ﻿using GodwitWHMS.Applications.SalesOrders;
-using GodwitWHMS.DTOs;
+using GodwitWHMS.Domain.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Formatter;
 using Microsoft.AspNetCore.OData.Query;

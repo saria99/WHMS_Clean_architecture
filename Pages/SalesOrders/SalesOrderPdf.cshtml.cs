@@ -1,7 +1,7 @@
 using GodwitWHMS.Applications.Companies;
 using GodwitWHMS.Applications.SalesOrderItems;
 using GodwitWHMS.Applications.SalesOrders;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;

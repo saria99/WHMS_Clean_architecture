@@ -2,7 +2,7 @@
 using GodwitWHMS.AppSettings;
 using GodwitWHMS.Infrastructures.Images;
 using GodwitWHMS.Infrastructures.Menus;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using GodwitWHMS.Pages.Shared.Dashmin;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;

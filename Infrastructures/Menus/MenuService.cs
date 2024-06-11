@@ -1,5 +1,5 @@
 ﻿using GodwitWHMS.Infrastructures.Extensions;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
 

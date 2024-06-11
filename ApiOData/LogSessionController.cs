@@ -1,5 +1,5 @@
 ﻿using GodwitWHMS.Applications.LogSessions;
-using GodwitWHMS.DTOs;
+using GodwitWHMS.Domain.DTOs;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 

@@ -2,7 +2,7 @@
 using GodwitWHMS.Applications.ProductGroups;
 using GodwitWHMS.Applications.Products;
 using GodwitWHMS.Applications.UnitMeasures;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 
 namespace GodwitWHMS.Data.Demo
 {

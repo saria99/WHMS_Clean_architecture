@@ -3,7 +3,7 @@ using GodwitWHMS.Applications.NumberSequences;
 using GodwitWHMS.Applications.VendorContacts;
 using GodwitWHMS.Applications.Vendors;
 using GodwitWHMS.Infrastructures.Extensions;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

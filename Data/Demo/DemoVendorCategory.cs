@@ -1,5 +1,5 @@
 ﻿using GodwitWHMS.Applications.VendorCategories;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 
 namespace GodwitWHMS.Data.Demo
 {

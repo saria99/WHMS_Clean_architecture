@@ -4,7 +4,7 @@ using GodwitWHMS.Applications.Companies;
 using GodwitWHMS.AppSettings;
 using GodwitWHMS.Infrastructures.Countries;
 using GodwitWHMS.Infrastructures.Extensions;
-using GodwitWHMS.Models.Entities;
+using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
