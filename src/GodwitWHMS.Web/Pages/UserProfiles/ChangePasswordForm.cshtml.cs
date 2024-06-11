@@ -1,7 +1,7 @@
 using AutoMapper;
 using GodwitWHMS.Applications.ApplicationUsers;
 using GodwitWHMS.Applications.LogErrors;
-using GodwitWHMS.AppSettings;
+using GodwitWHMS.Applications.AppSettings;
 using GodwitWHMS.Infrastructures.Extensions;
 using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authorization;

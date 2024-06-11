@@ -8,10 +8,14 @@
 
 	<ItemGroup>
 		<PackageReference Include="Haukcode.WkHtmlToPdfDotNet" Version="1.5.90" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" /> 
+		<PackageReference Include="MimeKit" Version="4.3.0" />
+		<PackageReference Include="NETCore.MailKit" Version="2.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\GodwitWHMS.Applications\GodwitWHMS.Applications.csproj" />
 	  <ProjectReference Include="..\GodwitWHMS.Domain\GodwitWHMS.Domain.csproj" />
 	</ItemGroup>
 </Project>

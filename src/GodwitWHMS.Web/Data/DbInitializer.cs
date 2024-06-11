@@ -1,6 +1,6 @@
 ﻿using GodwitWHMS.Applications.ApplicationUsers;
 using GodwitWHMS.Applications.Companies;
-using GodwitWHMS.AppSettings;
+using GodwitWHMS.Applications.AppSettings;
 using GodwitWHMS.Data.Demo;
 using GodwitWHMS.Data.System;
 using GodwitWHMS.Infrastructures.Countries;

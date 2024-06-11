@@ -1,5 +1,5 @@
 using GodwitWHMS;
-using GodwitWHMS.AppSettings;
+using GodwitWHMS.Applications.AppSettings;
 using GodwitWHMS.Data;
 using GodwitWHMS.Infrastructures.Middlewares;
 using GodwitWHMS.Infrastructures.ODatas;

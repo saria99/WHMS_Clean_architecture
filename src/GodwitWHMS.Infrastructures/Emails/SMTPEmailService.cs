@@ -1,4 +1,4 @@
-﻿using GodwitWHMS.AppSettings;
+﻿using GodwitWHMS.Applications.AppSettings;
 using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Options;

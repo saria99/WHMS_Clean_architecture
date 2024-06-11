@@ -1,7 +1,7 @@
 using AutoMapper;
 using GodwitWHMS.Applications.ApplicationUsers;
 using GodwitWHMS.Applications.Companies;
-using GodwitWHMS.AppSettings;
+using GodwitWHMS.Applications.AppSettings;
 using GodwitWHMS.Infrastructures.Countries;
 using GodwitWHMS.Infrastructures.Extensions;
 using GodwitWHMS.Infrastructures.Menus;

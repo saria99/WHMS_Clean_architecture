@@ -1,6 +1,6 @@
 using AutoMapper;
 using GodwitWHMS.Applications.ApplicationUsers;
-using GodwitWHMS.AppSettings;
+using GodwitWHMS.Applications.AppSettings;
 using GodwitWHMS.Infrastructures.Extensions;
 using GodwitWHMS.Infrastructures.Images;
 using GodwitWHMS.Domain.Models.Entities;

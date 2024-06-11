@@ -1,7 +1,7 @@
 ﻿#nullable disable
 
 using GodwitWHMS.Applications.Companies;
-using GodwitWHMS.AppSettings;
+using GodwitWHMS.Applications.AppSettings;
 using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;

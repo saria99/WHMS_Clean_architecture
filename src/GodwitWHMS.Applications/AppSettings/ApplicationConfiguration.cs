@@ -1,4 +1,4 @@
-﻿namespace GodwitWHMS.AppSettings
+﻿namespace GodwitWHMS.Applications.AppSettings
 {
     public class ApplicationConfiguration
     {
