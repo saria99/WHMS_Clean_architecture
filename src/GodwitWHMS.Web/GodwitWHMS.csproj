@@ -29,6 +29,7 @@
     <!--<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.2.5" />-->
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GodwitWHMS.Applications\GodwitWHMS.Applications.csproj" />
     <ProjectReference Include="..\GodwitWHMS.Domain\GodwitWHMS.Domain.csproj" />
     <ProjectReference Include="..\GodwitWHMS.Infrastructures\GodwitWHMS.Infrastructures.csproj" />
   </ItemGroup>

@@ -1,4 +1,4 @@
-﻿using GodwitWHMS.AppSettings;
+﻿using GodwitWHMS.Applications.AppSettings;
 using GodwitWHMS.Infrastructures.Menus;
 using GodwitWHMS.Pages.Shared.Dashmin;
 using Microsoft.AspNetCore.Identity;

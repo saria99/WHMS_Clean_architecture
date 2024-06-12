@@ -1,6 +1,6 @@
 ﻿using GodwitWHMS.Applications.ApplicationUsers;
 using GodwitWHMS.Applications.Companies;
-using GodwitWHMS.AppSettings;
+using GodwitWHMS.Applications.AppSettings;
 using GodwitWHMS.Data.Demo;
 using GodwitWHMS.Data.System;
 using GodwitWHMS.Infrastructures.Countries;
@@ -12,6 +12,7 @@ using GodwitWHMS.Domain.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using GodwitWHMS.Infrastructures.Data;
 
 namespace GodwitWHMS.Data
 {

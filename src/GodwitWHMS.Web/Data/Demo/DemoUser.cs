@@ -1,5 +1,5 @@
 ﻿using GodwitWHMS.Applications.Companies;
-using GodwitWHMS.AppSettings;
+using GodwitWHMS.Applications.AppSettings;
 using GodwitWHMS.Infrastructures.Images;
 using GodwitWHMS.Infrastructures.Menus;
 using GodwitWHMS.Domain.Models.Entities;

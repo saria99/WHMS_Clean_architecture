@@ -1,6 +1,6 @@
 using GodwitWHMS;
-using GodwitWHMS.AppSettings;
-using GodwitWHMS.Data;
+using GodwitWHMS.Applications.AppSettings;
+using GodwitWHMS.Infrastructures.Data;
 using GodwitWHMS.Infrastructures.Middlewares;
 using GodwitWHMS.Infrastructures.ODatas;
 using GodwitWHMS.Infrastructures.Pdfs;
@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using WkHtmlToPdfDotNet;
 using WkHtmlToPdfDotNet.Contracts;
+using GodwitWHMS.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
