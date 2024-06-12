@@ -15,7 +15,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\GodwitWHMS.Applications\GodwitWHMS.Applications.csproj" />
 	  <ProjectReference Include="..\GodwitWHMS.Domain\GodwitWHMS.Domain.csproj" />
 	</ItemGroup>
 </Project>
