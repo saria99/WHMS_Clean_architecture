@@ -49,6 +49,7 @@ namespace GodwitWHMS.Infrastructures.Data
         public DbSet<AdjustmentMinus> AdjustmentMinus { get; set; } = default!;
         public DbSet<AdjustmentPlus> AdjustmentPlus { get; set; } = default!;
         public DbSet<Scrapping> Scrapping { get; set; } = default!;
+        public DbSet<PackageSku> PackageSku { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -93,6 +94,7 @@ namespace GodwitWHMS.Infrastructures.Data
             modelBuilder.ApplyConfiguration(new AdjustmentMinusConfiguration());
             modelBuilder.ApplyConfiguration(new AdjustmentPlusConfiguration());
             modelBuilder.ApplyConfiguration(new ScrappingConfiguration());
+            modelBuilder.ApplyConfiguration(new PackageSkuConfiguration());
         }
 
     }

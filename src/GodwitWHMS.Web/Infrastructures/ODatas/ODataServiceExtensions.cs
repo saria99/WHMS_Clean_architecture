@@ -63,6 +63,9 @@ namespace GodwitWHMS.Infrastructures.ODatas
             builder.EntitySet<StockCountItemChildDto>("StockCountItemChild");
             builder.EntitySet<AspNetRoleChildDto>("AspNetRoleChild");
 
+            // Add SKU generator function
+            builder.EntitySet<PackageSkuDto>("PackageSku");
+
             services.AddControllers()
                 .AddOData(options => options.Select().Filter().OrderBy().Expand().Count().SetMaxTop(null)
                 .AddRouteComponents("odata", builder.GetEdmModel(), odataServices =>

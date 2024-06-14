@@ -7,6 +7,7 @@ using GodwitWHMS.Applications.CustomerContacts;
 using GodwitWHMS.Applications.CustomerGroups;
 using GodwitWHMS.Applications.Customers;
 using GodwitWHMS.Applications.DeliveryOrders;
+using GodwitWHMS.Applications.Features.PackagesSku;
 using GodwitWHMS.Applications.GoodsReceives;
 using GodwitWHMS.Applications.InventoryTransactions;
 using GodwitWHMS.Applications.LogAnalytics;
@@ -92,6 +93,8 @@ namespace GodwitWHMS
             services.AddScoped<AdjustmentMinusService>();
             services.AddScoped<AdjustmentPlusService>();
             services.AddScoped<ScrappingService>();
+
+            services.AddScoped<PackageSkuService>();
 
             return services;
         }

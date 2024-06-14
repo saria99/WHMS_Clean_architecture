@@ -89,6 +89,9 @@ namespace GodwitWHMS.Pages.Shared.Dashmin
                 new MenuItem("/LogSessions/LogSessionList", "Session Log", false),
                 new MenuItem("/LogErrors/LogErrorList", "Error Log", false),
                 new MenuItem("/LogAnalytics/LogAnalyticList", "Analytic Log", false),
+                // Add the new menu item for Generate SKU
+                new MenuItem("#", "Pre Recieving", true),
+                new MenuItem("/PackageSkus/PackageSkuList", "Package Skus", false)
             };
 
 

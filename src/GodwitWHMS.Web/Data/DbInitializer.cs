@@ -55,6 +55,7 @@ namespace GodwitWHMS.Data
             {
                 await DemoUser.GenerateAsync(userManager, appConfig, fileImageService, companyService, menuService);
                 await DemoCustomerGroup.GenerateAsync(services);
+
                 await DemoCustomerCategory.GenerateAsync(services);
                 await DemoVendorGroup.GenerateAsync(services);
                 await DemoVendorCategory.GenerateAsync(services);
@@ -79,6 +80,8 @@ namespace GodwitWHMS.Data
                 await DemoAdjustmentPlus.GenerateAsync(services);
                 await DemoScrapping.GenerateAsync(services);
                 await DemoStockCount.GenerateAsync(services);
+
+                await DemoPackageSku.GenerateAsync(services);
             }
         }
 
