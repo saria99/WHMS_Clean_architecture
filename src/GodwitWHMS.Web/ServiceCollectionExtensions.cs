@@ -33,6 +33,7 @@ using GodwitWHMS.Applications.VendorContacts;
 using GodwitWHMS.Applications.VendorGroups;
 using GodwitWHMS.Applications.Vendors;
 using GodwitWHMS.Applications.Warehouses;
+using GodwitWHMS.Infrastructures.BarCode;
 using GodwitWHMS.Infrastructures.Countries;
 using GodwitWHMS.Infrastructures.Currencies;
 using GodwitWHMS.Infrastructures.Docs;
@@ -52,6 +53,7 @@ namespace GodwitWHMS
         {
             services.AddTransient<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IEmailSender, SMTPEmailService>();
+            services.AddTransient<IBarcodeGenerator, BarcodeGenerator>();
             services.AddScoped<IFileImageService, FileImageService>();
             services.AddScoped<IFileDocumentService, FileDocumentService>();
             services.AddScoped<ITimeZoneService, TimeZoneService>();

@@ -1,6 +1,7 @@
 using AutoMapper;
 using GodwitWHMS.Applications.Features.PackagesSku;
 using GodwitWHMS.Domain.Models.Entities;
+using GodwitWHMS.Infrastructures.BarCode;
 using GodwitWHMS.Infrastructures.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,13 +16,16 @@ namespace GodwitWHMS.Pages.PackageSkus
     {
         private readonly IMapper _mapper;
         private readonly PackageSkuService _skuService;
+        private readonly IBarcodeGenerator _barcodeGenerator;
 
         public GenerateSkuModel(
             IMapper mapper,
-            PackageSkuService skuService)
+            PackageSkuService skuService,
+            IBarcodeGenerator barcodeGenerator)
         {
             _mapper = mapper;
             _skuService = skuService;
+            _barcodeGenerator = barcodeGenerator;
         }
 
         [TempData]
@@ -93,7 +97,7 @@ namespace GodwitWHMS.Pages.PackageSkus
             }
         }
 
-        public async Task<IActionResult> OnPostAsync([Bind(Prefix = nameof(PackageSkuForm))] PackageSkuModel input)
+        public async Task<IActionResult> OnPostAsync([Bind(Prefix = nameof(PackageSkuForm))] PackageSkuModel input, string? generateBarcode)
         {
             if (!ModelState.IsValid)
             {
@@ -112,6 +116,15 @@ namespace GodwitWHMS.Pages.PackageSkus
             {
                 var newObj = _mapper.Map<PackageSku>(input);
                 newObj.Code = _skuService.GenerateNumber(nameof(PackageSku), "GW-", "", false, 8);
+
+                if (string.IsNullOrEmpty(newObj.Code))
+                {
+                    ModelState.AddModelError(nameof(PackageSkuForm.ScannedCode), "Scanned code is required to generate barcode.");
+                    return Page();
+                }
+
+                var barcode = _barcodeGenerator.GenerateBarcode(input.ScannedCode, 31, 23);
+                // return File(barcode, "image/png");
 
                 await _skuService.AddAsync(newObj);
 
