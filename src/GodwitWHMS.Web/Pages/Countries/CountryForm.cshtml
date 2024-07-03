@@ -1,0 +1,110 @@
+﻿@page "{rowGuid?}"
+@using GodwitWHMS.Domain.Models.Enums
+@model GodwitWHMS.Pages.Countries.CountryFormModel
+@{
+    Layout = "~/Pages/Shared/Dashmin/_Admin.cshtml";
+    var statusMessage = Model.StatusMessage;
+    Model.StatusMessage = string.Empty;
+}
+
+<div class="form-card" id="formcard">
+    <div class="m-2">
+        <form id="formMain" method="post" novalidate="">
+            <input type="hidden" asp-for="@Model.CountryForm.RowGuid" />
+            <input type="hidden" asp-for="@Model.CountryForm.Id" />
+            <div class="form-card-body">
+                <div>
+                    <ul class="nav nav-tabs nav-tabs-sm" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-0 text-body active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-0 text-body" id="audit-tab" data-bs-toggle="tab" data-bs-target="#audit" type="button" role="tab" aria-controls="audit" aria-selected="false">Audit</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                            <p class="small-italic-left">General</p>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.CountryForm.CountryCode" class="form-label"></label>
+                                            <input asp-for="@Model.CountryForm.CountryCode" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.CountryForm.CountryName" class="form-label"></label>
+                                            <input asp-for="@Model.CountryForm.CountryName" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="tab-pane fade" id="audit" role="tabpanel" aria-labelledby="audit-tab">
+                            <p class="small-italic-left">Audit</p>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.CountryForm.CreatedAtString"></label>
+                                        <input class="form-control" asp-for="@Model.CountryForm.CreatedAtString" type="text" placeholder="CreatedAt" disabled />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.CountryForm.CreatedByUserName"></label>
+                                        <input class="form-control" asp-for="@Model.CountryForm.CreatedByUserName" type="text" placeholder="CreatedBy" disabled />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.CountryForm.UpdatedAtString"></label>
+                                        <input class="form-control" asp-for="@Model.CountryForm.UpdatedAtString" type="text" placeholder="UpdatedAt" disabled />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.CountryForm.UpdatedByUserName"></label>
+                                        <input class="form-control" asp-for="@Model.CountryForm.UpdatedByUserName" type="text" placeholder="UpdatedBy" disabled />
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-card-footer">
+                <button type="submit" id="btnSubmit" class="e-btn e-control @(Model.Action == "delete" ? "e-danger" : "")">@(Model.Action == "delete" ? "Delete" : "Submit")</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            showStatusMessage('@statusMessage');
+
+            new ej.inputs.TextBox({}, '#CountryForm_CountryCode');
+            new ej.inputs.TextBox({}, '#CountryForm_CountryName');
+            new ej.inputs.TextBox({}, '#CountryForm_CreatedAtString');
+            new ej.inputs.TextBox({}, '#CountryForm_CreatedByUserName');
+            new ej.inputs.TextBox({}, '#CountryForm_UpdatedAtString');
+            new ej.inputs.TextBox({}, '#CountryForm_UpdatedByUserName');
+            new ej.buttons.Button({ isPrimary: true }, '#btnSubmit');
+
+            var validationOptions = {
+                rules: {
+                    'CountryForm.CountryCode': { required: true, maxlength: 2 },
+                    'CountryForm.CountryName': { required: true, maxlength: 100 },
+                }
+            };
+
+            var formValidator = new ej.inputs.FormValidator('#formMain', validationOptions);
+            var formElement = document.getElementById('formMain');
+            formElement.addEventListener('submit', function (e) {
+
+                console.log(formValidator.validate(), 'validated as ')
+                e.preventDefault();
+                if (formValidator.validate()) {
+                    formElement.submit();
+                }
+            });
+        });
+    </script>
+}

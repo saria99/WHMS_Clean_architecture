@@ -7,7 +7,6 @@ using GodwitWHMS.Applications.CustomerContacts;
 using GodwitWHMS.Applications.CustomerGroups;
 using GodwitWHMS.Applications.Customers;
 using GodwitWHMS.Applications.DeliveryOrders;
-using GodwitWHMS.Applications.Features.PackagesSku;
 using GodwitWHMS.Applications.GoodsReceives;
 using GodwitWHMS.Applications.InventoryTransactions;
 using GodwitWHMS.Applications.LogAnalytics;
@@ -44,6 +43,8 @@ using GodwitWHMS.Infrastructures.Repositories;
 using GodwitWHMS.Infrastructures.TimeZones;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using GodwitWHMS.Applications.Features.PackagesSku;
+using GodwitWHMS.Applications.Features.Countries;
 
 namespace GodwitWHMS
 {
@@ -97,6 +98,7 @@ namespace GodwitWHMS
             services.AddScoped<ScrappingService>();
 
             services.AddScoped<PackageSkuService>();
+            services.AddScoped<CountryServicev2>();
 
             return services;
         }

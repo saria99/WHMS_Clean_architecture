@@ -84,6 +84,7 @@ namespace GodwitWHMS.Pages.Shared.Dashmin
                 new MenuItem("/Taxes/TaxList", "Tax", false),
                 new MenuItem("/UserProfiles/UserList", "User Profile", false),
                 new MenuItem("/Users/UserList", "User List", false),
+                new MenuItem("/Countries/CountryList", "Country List", false),
                 new MenuItem("/NumberSequences/NumberSequenceList", "Sequence", false),
                 new MenuItem("#", "Log", true),
                 new MenuItem("/LogSessions/LogSessionList", "Session Log", false),
