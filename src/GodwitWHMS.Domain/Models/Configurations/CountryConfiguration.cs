@@ -13,16 +13,10 @@ namespace GodwitWHMS.Domain.Models.Configurations
             builder.HasKey(c => c.Id);
             builder.Property(c => c.CountryCode)
                 .IsRequired()
-                .HasMaxLength(2)
-                .IsUnicode(false); // Assuming CountryCode is an ISO Alpha-2 code
+                .HasMaxLength(4);
             builder.Property(c => c.CountryName)
                 .IsRequired()
                 .HasMaxLength(100);
-
-            builder.HasIndex(c => c.CountryCode)
-                .IsUnique();
-            builder.HasIndex(c => c.CountryName)
-                .IsUnique();
         }
     }
 }
