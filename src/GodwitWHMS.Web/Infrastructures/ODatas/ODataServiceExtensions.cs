@@ -66,6 +66,7 @@ namespace GodwitWHMS.Infrastructures.ODatas
             // Add SKU generator function
             builder.EntitySet<PackageSkuDto>("PackageSku");
             builder.EntitySet<CountryDto>("Country");
+            builder.EntitySet<CarrierDto>("Carrier");
 
             services.AddControllers()
                 .AddOData(options => options.Select().Filter().OrderBy().Expand().Count().SetMaxTop(null)

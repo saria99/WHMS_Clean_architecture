@@ -21,7 +21,7 @@ namespace GodwitWHMS.Data.System
 
                 var defaultCompany = new Company
                 {
-                    Name = "Default Company, LLC.",
+                    Name = "Godwit Haven General Warehousing, LLC.",
                     Currency = currencyService?.GetCurrencies().FirstOrDefault(x => x.Value.Equals("US$"))?.Value ?? "US$",
                     TimeZone = timezoneService?.GetAllTimeZones().FirstOrDefault(x => x.Value.Equals("SE Asia Standard Time"))?.Value ?? "SE Asia Standard Time",
                     Street = "123 Elm Street",

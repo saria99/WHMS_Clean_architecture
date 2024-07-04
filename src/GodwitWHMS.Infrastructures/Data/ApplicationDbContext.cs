@@ -51,6 +51,7 @@ namespace GodwitWHMS.Infrastructures.Data
         public DbSet<Scrapping> Scrapping { get; set; } = default!;
         public DbSet<PackageSku> PackageSku { get; set; } = default!;
         public DbSet<Country> Country { get; set; } = default!;
+        public DbSet<Carrier> Carrier { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -97,6 +98,7 @@ namespace GodwitWHMS.Infrastructures.Data
             modelBuilder.ApplyConfiguration(new ScrappingConfiguration());
             modelBuilder.ApplyConfiguration(new PackageSkuConfiguration());
             modelBuilder.ApplyConfiguration(new CountryConfiguration());
+            modelBuilder.ApplyConfiguration(new CarrierConfiguration());
         }
 
     }
