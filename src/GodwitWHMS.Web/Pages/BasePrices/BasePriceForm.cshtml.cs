@@ -60,6 +60,12 @@ namespace GodwitWHMS.Pages.BasePrices
             [DisplayName("Price")]
             public decimal Price { get; set; }
 
+            [DisplayName("Price with Fuel Surcharge")]
+            public decimal PriceWithFuelSurcharge { get; set; }
+
+            [DisplayName("Total Price")]
+            public decimal TotalPrice { get; set; }
+
             [DisplayName("Created At")]
             public string? CreatedAtString { get; set; } = string.Empty;
 
@@ -150,7 +156,8 @@ namespace GodwitWHMS.Pages.BasePrices
 
             if (action == "create")
             {
-                var newobj = _mapper.Map<BasePrice>(input);
+                var newobj = _mapper.Map<BasePrice>(input); // Assuming "Express" for example
+
                 await _basePriceService.AddAsync(newobj);
 
                 this.WriteStatusMessage($"Success create new data.");
@@ -166,6 +173,7 @@ namespace GodwitWHMS.Pages.BasePrices
                 }
 
                 _mapper.Map(input, existing);
+
                 await _basePriceService.UpdateAsync(existing);
 
                 this.WriteStatusMessage($"Success update existing data.");
@@ -186,6 +194,18 @@ namespace GodwitWHMS.Pages.BasePrices
                 return Redirect("./BasePriceList");
             }
             return Page();
+        }
+
+        private decimal CalculateFuelSurcharge(decimal price, int carrierId)
+        {
+            // Implement your fuel surcharge calculation logic here
+            return 0; // Replace with actual calculation
+        }
+
+        private decimal CalculateCommission(decimal priceWithFuelSurcharge, string serviceType)
+        {
+            // Implement your commission calculation logic here
+            return 0; // Replace with actual calculation
         }
     }
 }

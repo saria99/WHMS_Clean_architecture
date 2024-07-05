@@ -18,6 +18,16 @@ namespace GodwitWHMS.Applications.Features.Commissions
         {
         }
 
+        public decimal GetCurrentCommission(string serviceType)
+        {
+            var currentCommission = _context.Set<Commission>()
+                .Where(c => c.ServiceType == serviceType)
+                .OrderByDescending(c => c.EffectiveDate)
+                .FirstOrDefault();
+
+            return currentCommission != null ? currentCommission.CommissionPercentage : 0;
+        }
+
 
     }
 }

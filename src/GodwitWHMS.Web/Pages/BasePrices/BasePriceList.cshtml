@@ -40,15 +40,15 @@
                 gridLines: 'Horizontal',
                 columns: [
                     { type: 'checkbox', width: 60 },
-                    {
-                        field: 'Id', isPrimaryKey: true, headerText: 'Id', visible: false
-                    },
+                    { field: 'Id', isPrimaryKey: true, headerText: 'Id', visible: false },
                     { field: 'CreatedAtUtc', width: 150, format: 'yyyy-MM-dd HH:mm:ss', textAlign: 'Left', type: 'dateTime' },
                     { field: 'CarrierName', headerText: 'Carrier Name', width: 150 },
                     { field: 'OriginCountryName', headerText: 'Origin Country', width: 150 },
                     { field: 'DestinationCountryName', headerText: 'Destination Country', width: 150 },
                     { field: 'Weight', headerText: 'Weight', width: 100, format: 'N2', textAlign: 'Right' },
                     { field: 'Price', headerText: 'Price', width: 100, format: 'C2', textAlign: 'Right' },
+                    { field: 'PriceWithFuelSurcharge', headerText: 'Price With Fuel Surcharge', width: 150, format: 'C2', textAlign: 'Right' },
+                    { field: 'TotalPrice', headerText: 'Total Price', width: 150, format: 'C2', textAlign: 'Right' }
                 ],
                 toolbar: [
                     'ExcelExport', 'Search',
@@ -56,11 +56,12 @@
                     { text: 'Add', tooltipText: 'Add', prefixIcon: 'e-add', id: 'AddCustom' },
                     { text: 'Edit', tooltipText: 'Edit', prefixIcon: 'e-edit', id: 'EditCustom' },
                     { text: 'Delete', tooltipText: 'Delete', prefixIcon: 'e-delete', id: 'DeleteCustom' },
+                    { text: 'Calculate Prices', tooltipText: 'Calculate Prices', prefixIcon: 'e-refresh', id: 'CalculatePrices' }
                 ],
                 beforeDataBound: () => { },
                 dataBound: function () {
                     grid.toolbarModule.enableItems(['EditCustom', 'DeleteCustom'], false);
-                    grid.autoFitColumns(['CarrierName', 'OriginCountryName', 'DestinationCountryName', 'Weight', 'Price', 'CreatedAtUtc']);
+                    grid.autoFitColumns(['CarrierName', 'OriginCountryName', 'DestinationCountryName', 'Weight', 'Price', 'PriceWithFuelSurcharge', 'TotalPrice', 'CreatedAtUtc']);
                 },
                 excelExportComplete: () => { },
                 rowSelected: () => {
@@ -82,7 +83,7 @@
                         grid.clearSelection();
                     }
                 },
-                toolbarClick: (args) => {
+                toolbarClick: async (args) => {
                     if (args.item.id === 'Grid_excelexport') {
                         grid.excelExport();
                     }
@@ -118,6 +119,12 @@
                                 closeOnEscape: true
                             });
                         }
+                    }
+
+
+                    if (args.item.id === 'CalculatePrices') {
+                        var formUrl = '/BasePrices/TotalPriceForm';
+                        window.location.href = formUrl;
                     }
                 }
             });

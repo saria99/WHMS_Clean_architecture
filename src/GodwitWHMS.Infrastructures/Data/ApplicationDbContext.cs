@@ -55,6 +55,7 @@ namespace GodwitWHMS.Infrastructures.Data
         public DbSet<BasePrice> BasePrice { get; set; } = default!;
         public DbSet<FuelSurcharge> FuelSurcharge { get; set; } = default!;
         public DbSet<Commission> Commission { get; set; } = default!;
+        public DbSet<CalculatedPrice> CalculatedPrice { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -105,6 +106,7 @@ namespace GodwitWHMS.Infrastructures.Data
             modelBuilder.ApplyConfiguration(new BasePriceConfiguration());
             modelBuilder.ApplyConfiguration(new FuelSurchargeConfiguration());
             modelBuilder.ApplyConfiguration(new CommissionConfiguration());
+            modelBuilder.ApplyConfiguration(new CalculatedPriceConfiguration());
         }
 
     }

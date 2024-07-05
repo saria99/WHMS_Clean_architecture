@@ -107,6 +107,7 @@ namespace GodwitWHMS
             services.AddScoped<BasePriceService>();
             services.AddScoped<FuelSurchargeService>();
             services.AddScoped<CommissionService>();
+            services.AddScoped<CalculatedPriceService>();
 
             return services;
         }

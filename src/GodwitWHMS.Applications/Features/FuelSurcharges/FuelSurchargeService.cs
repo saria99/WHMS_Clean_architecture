@@ -14,5 +14,19 @@ namespace GodwitWHMS.Applications.Features.FuelSurcharges
             base(context, httpContextAccessor, auditColumnTransformer)
         {
         }
+
+
+
+        public decimal GetCurrentFuelSurcharge(int carrierId, int originCountryId, int destinationCountryId)
+        {
+            var currentFuelSurcharge = _context.Set<FuelSurcharge>()
+                .Where(fs => fs.CarrierId == carrierId &&
+                             fs.OriginCountryId == originCountryId &&
+                             fs.DestinationCountryId == destinationCountryId)
+                .OrderByDescending(fs => fs.EffectiveDate)
+                .FirstOrDefault();
+
+            return currentFuelSurcharge != null ? currentFuelSurcharge.FuelSurchargePercentage : 0;
+        }
     }
 }

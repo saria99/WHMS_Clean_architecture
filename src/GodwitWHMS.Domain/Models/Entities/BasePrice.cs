@@ -18,5 +18,8 @@ namespace GodwitWHMS.Domain.Models.Entities
 
         public required decimal Weight { get; set; }
         public required decimal Price { get; set; }
+
+        public decimal PriceWithFuelSurcharge { get; set; } // New column
+        public decimal TotalPrice { get; set; } // New column
     }
 }

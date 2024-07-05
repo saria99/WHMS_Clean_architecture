@@ -21,6 +21,7 @@ namespace GodwitWHMS.ApiOData
 
         public class MappingProfile : Profile
         {
+
             public MappingProfile()
             {
                 CreateMap<InventoryTransaction, GoodsReceiveItemChildDto>();
@@ -103,7 +104,7 @@ namespace GodwitWHMS.ApiOData
             }
         }
 
-
+        
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] GoodsReceiveItemChildDto postInput)
         {

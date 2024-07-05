@@ -63,6 +63,18 @@
                                             <input asp-for="@Model.BasePriceForm.Price" class="form-control" />
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.BasePriceForm.PriceWithFuelSurcharge" class="form-label"></label>
+                                            <input asp-for="@Model.BasePriceForm.PriceWithFuelSurcharge" class="form-control" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.BasePriceForm.TotalPrice" class="form-label"></label>
+                                            <input asp-for="@Model.BasePriceForm.TotalPrice" class="form-control" readonly />
+                                        </div>
+                                    </div>
                                 </div>
                             </fieldset>
                         </div>

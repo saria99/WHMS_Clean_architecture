@@ -11,6 +11,8 @@
         public string? DestinationCountryName { get; set; }
         public decimal Weight { get; set; }
         public decimal Price { get; set; }
+        public decimal PriceWithFuelSurcharge { get; set; } 
+        public decimal TotalPrice { get; set; }
         public Guid? RowGuid { get; set; }
         public DateTime? CreatedAtUtc { get; set; }
     }
