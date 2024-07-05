@@ -48,6 +48,7 @@ using GodwitWHMS.Applications.Features.Countries;
 using GodwitWHMS.Applications.Features.Carriers;
 using GodwitWHMS.Applications.Features.BasePrices;
 using GodwitWHMS.Applications.Features.FuelSurcharges;
+using GodwitWHMS.Applications.Features.Commissions;
 
 namespace GodwitWHMS
 {
@@ -105,6 +106,7 @@ namespace GodwitWHMS
             services.AddScoped<CarrierService>();
             services.AddScoped<BasePriceService>();
             services.AddScoped<FuelSurchargeService>();
+            services.AddScoped<CommissionService>();
 
             return services;
         }
