@@ -1,0 +1,138 @@
+﻿@page "{rowGuid?}"
+@using GodwitWHMS.Domain.Models.Enums
+@model GodwitWHMS.Pages.BasePrices.BasePriceFormModel
+@{
+    Layout = "~/Pages/Shared/Dashmin/_Admin.cshtml";
+    var statusMessage = Model.StatusMessage;
+    Model.StatusMessage = string.Empty;
+}
+
+<div class="form-card" id="formcard">
+    <div class="m-2">
+        <form id="formMain" method="post" novalidate="">
+            <input type="hidden" asp-for="@Model.BasePriceForm.RowGuid" />
+            <input type="hidden" asp-for="@Model.BasePriceForm.Id" />
+            <div class="form-card-body">
+                <div>
+                    <ul class="nav nav-tabs nav-tabs-sm" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-0 text-body active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-0 text-body" id="audit-tab" data-bs-toggle="tab" data-bs-target="#audit" type="button" role="tab" aria-controls="audit" aria-selected="false">Audit</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                            <p class="small-italic-left">General</p>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.BasePriceForm.CarrierId" class="form-label"></label>
+                                            <select asp-for="@Model.BasePriceForm.CarrierId" asp-items="@Model.CarrierLookup" class="form-control">
+                                                <option value="">-- Select Carrier --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.BasePriceForm.OriginCountryId" class="form-label"></label>
+                                            <select asp-for="@Model.BasePriceForm.OriginCountryId" asp-items="@Model.CountryLookup" class="form-control">
+                                                <option value="">-- Select Origin Country --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.BasePriceForm.DestinationCountryId" class="form-label"></label>
+                                            <select asp-for="@Model.BasePriceForm.DestinationCountryId" asp-items="@Model.CountryLookup" class="form-control">
+                                                <option value="">-- Select Destination Country --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.BasePriceForm.Weight" class="form-label"></label>
+                                            <input asp-for="@Model.BasePriceForm.Weight" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.BasePriceForm.Price" class="form-label"></label>
+                                            <input asp-for="@Model.BasePriceForm.Price" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="tab-pane fade" id="audit" role="tabpanel" aria-labelledby="audit-tab">
+                            <p class="small-italic-left">Audit</p>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.BasePriceForm.CreatedAtString"></label>
+                                        <input class="form-control" asp-for="@Model.BasePriceForm.CreatedAtString" type="text" placeholder="CreatedAt" disabled />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.BasePriceForm.CreatedByUserName"></label>
+                                        <input class="form-control" asp-for="@Model.BasePriceForm.CreatedByUserName" type="text" placeholder="CreatedBy" disabled />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.BasePriceForm.UpdatedAtString"></label>
+                                        <input class="form-control" asp-for="@Model.BasePriceForm.UpdatedAtString" type="text" placeholder="UpdatedAt" disabled />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" asp-for="@Model.BasePriceForm.UpdatedByUserName"></label>
+                                        <input class="form-control" asp-for="@Model.BasePriceForm.UpdatedByUserName" type="text" placeholder="UpdatedBy" disabled />
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-card-footer">
+                <button type="submit" id="btnSubmit" class="e-btn e-control @(Model.Action == "delete" ? "e-danger" : "")">@(Model.Action == "delete" ? "Delete" : "Submit")</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            showStatusMessage('@statusMessage');
+
+            new ej.dropdowns.DropDownList({ allowFiltering: true }, '#BasePriceForm_CarrierId');
+            new ej.dropdowns.DropDownList({ allowFiltering: true }, '#BasePriceForm_OriginCountryId');
+            new ej.dropdowns.DropDownList({ allowFiltering: true }, '#BasePriceForm_DestinationCountryId');
+            new ej.inputs.NumericTextBox({ format: 'N2', min: 0.0 }, '#BasePriceForm_Weight');
+            new ej.inputs.NumericTextBox({ format: 'N2', min: 0.0 }, '#BasePriceForm_Price');
+            new ej.inputs.TextBox({}, '#BasePriceForm_CreatedAtString');
+            new ej.inputs.TextBox({}, '#BasePriceForm_CreatedByUserName');
+            new ej.inputs.TextBox({}, '#BasePriceForm_UpdatedAtString');
+            new ej.inputs.TextBox({}, '#BasePriceForm_UpdatedByUserName');
+            new ej.buttons.Button({ isPrimary: true }, '#btnSubmit');
+
+            var validationOptions = {
+                rules: {
+                    'BasePriceForm.CarrierId': { required: true },
+                    'BasePriceForm.OriginCountryId': { required: true },
+                    'BasePriceForm.DestinationCountryId': { required: true },
+                    'BasePriceForm.Weight': { required: true },
+                    'BasePriceForm.Price': { required: true }
+                }
+            }
+
+            var formValidator = new ej.inputs.FormValidator('#formMain', validationOptions);
+            var formElement = document.getElementById('formMain');
+            formElement.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (formValidator.validate()) {
+                    formElement.submit();
+                }
+            });
+        });
+    </script>
+}

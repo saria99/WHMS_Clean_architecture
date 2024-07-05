@@ -1,5 +1,5 @@
 ﻿@page
-@model GodwitWHMS.Pages.Carriers.CarrierListModel
+@model GodwitWHMS.Pages.BasePrices.BasePriceListModel
 @{
     Layout = "~/Pages/Shared/Dashmin/_Admin.cshtml";
     var statusMessage = Model.StatusMessage;
@@ -20,7 +20,7 @@
             var grid = new ej.grids.Grid({
                 height: getDashminGridHeight(),
                 dataSource: new ej.data.DataManager({
-                    url: '/odata/Carrier',
+                    url: '/odata/BasePrice',
                     adaptor: new ej.data.ODataV4Adaptor()
                 }),
                 allowFiltering: true,
@@ -32,7 +32,7 @@
                 allowPaging: true,
                 allowExcelExport: true,
                 filterSettings: { type: 'CheckBox' },
-                sortSettings: { columns: [{ field: 'CarrierName', direction: 'Ascending' }] },
+                sortSettings: { columns: [{ field: 'CreatedAtUtc', direction: 'Descending' }] },
                 pageSettings: { currentPage: 1, pageSize: 50, pageSizes: ["10", "20", "50", "100", "200", "All"] },
                 selectionSettings: { persistSelection: true, type: 'Single' },
                 autoFit: true,
@@ -43,8 +43,12 @@
                     {
                         field: 'Id', isPrimaryKey: true, headerText: 'Id', visible: false
                     },
-                    { field: 'CreatedAtUtc', width: 150, format: 'yyyy-MM-dd HH:ss', textAlign: 'Left', type: 'dateTime' },
-                    { field: 'CarrierName', headerText: 'Carrier Name', width: 100 },
+                    { field: 'CreatedAtUtc', width: 150, format: 'yyyy-MM-dd HH:mm:ss', textAlign: 'Left', type: 'dateTime' },
+                    { field: 'CarrierName', headerText: 'Carrier Name', width: 150 },
+                    { field: 'OriginCountryName', headerText: 'Origin Country', width: 150 },
+                    { field: 'DestinationCountryName', headerText: 'Destination Country', width: 150 },
+                    { field: 'Weight', headerText: 'Weight', width: 100, format: 'N2', textAlign: 'Right' },
+                    { field: 'Price', headerText: 'Price', width: 100, format: 'C2', textAlign: 'Right' },
                 ],
                 toolbar: [
                     'ExcelExport', 'Search',
@@ -56,7 +60,7 @@
                 beforeDataBound: () => { },
                 dataBound: function () {
                     grid.toolbarModule.enableItems(['EditCustom', 'DeleteCustom'], false);
-                    grid.autoFitColumns(['CarrierName']);
+                    grid.autoFitColumns(['CarrierName', 'OriginCountryName', 'DestinationCountryName', 'Weight', 'Price', 'CreatedAtUtc']);
                 },
                 excelExportComplete: () => { },
                 rowSelected: () => {
@@ -84,14 +88,14 @@
                     }
 
                     if (args.item.id === 'AddCustom') {
-                        var formUrl = '/Carriers/CarrierForm?action=create';
+                        var formUrl = '/BasePrices/BasePriceForm?action=create';
                         window.location.href = formUrl;
                     }
 
                     if (args.item.id === 'EditCustom') {
                         if (grid.getSelectedRecords().length) {
-                            var selectedRowGuid = grid.getSelectedRecords()[0].RowGuid;
-                            var formUrl = '/Carriers/CarrierForm?rowGuid=' + selectedRowGuid + '&action=edit';
+                            var selectedId = grid.getSelectedRecords()[0].Id;
+                            var formUrl = '/BasePrices/BasePriceForm?id=' + selectedId + '&action=edit';
                             window.location.href = formUrl;
                         }
                     }
@@ -104,8 +108,8 @@
                                 okButton: {
                                     click: () => {
                                         dialogObj.hide();
-                                        var selectedRowGuid = grid.getSelectedRecords()[0].RowGuid;
-                                        var formUrl = '/Carriers/CarrierForm?rowGuid=' + selectedRowGuid + '&action=delete';
+                                        var selectedId = grid.getSelectedRecords()[0].Id;
+                                        var formUrl = '/BasePrices/BasePriceForm?id=' + selectedId + '&action=delete';
                                         window.location.href = formUrl;
                                     }
                                 },

@@ -94,6 +94,7 @@ namespace GodwitWHMS.Infrastructures.Menus
                 new MenuItem("/Users/UserList", "User List", false),
                 new MenuItem("/Countries/CountryList", "Country List", false),
                 new MenuItem("/Carriers/CarrierList", "Carrier List", false),
+                new MenuItem("/BasePrices/BasePriceList", "Base Price List", false),
                 new MenuItem("/NumberSequences/NumberSequenceList", "Sequence", false),
                 new MenuItem("#", "Log", true),
                 new MenuItem("/LogSessions/LogSessionList", "Session Log", false),

@@ -35,7 +35,7 @@ namespace GodwitWHMS.Pages.Companies
             _currencyService = currencyService;
             _timeZoneService = timeZoneService;
         }
-
+        
         [TempData]
         public string StatusMessage { get; set; } = string.Empty;
         public string? Action { get; set; } = string.Empty;

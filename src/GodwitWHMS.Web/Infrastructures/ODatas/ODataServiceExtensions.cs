@@ -67,6 +67,7 @@ namespace GodwitWHMS.Infrastructures.ODatas
             builder.EntitySet<PackageSkuDto>("PackageSku");
             builder.EntitySet<CountryDto>("Country");
             builder.EntitySet<CarrierDto>("Carrier");
+            builder.EntitySet<BasePriceDto>("BasePrice");
 
             services.AddControllers()
                 .AddOData(options => options.Select().Filter().OrderBy().Expand().Count().SetMaxTop(null)

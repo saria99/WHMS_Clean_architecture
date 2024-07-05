@@ -98,7 +98,7 @@ namespace GodwitWHMS.Pages.GoodsReceives
         public ICollection<object> WarehouseLookup { get; set; } = default!;
         private void BindLookup()
         {
-
+            
             PurchaseOrderLookup = _purchaseOrderService
                 .GetAll()
                 .Include(x => x.Vendor)

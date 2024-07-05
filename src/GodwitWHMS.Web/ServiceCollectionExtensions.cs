@@ -46,6 +46,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using GodwitWHMS.Applications.Features.PackagesSku;
 using GodwitWHMS.Applications.Features.Countries;
 using GodwitWHMS.Applications.Features.Carriers;
+using GodwitWHMS.Applications.Features.BasePrices;
 
 namespace GodwitWHMS
 {
@@ -101,6 +102,7 @@ namespace GodwitWHMS
             services.AddScoped<PackageSkuService>();
             services.AddScoped<CountryServicev2>();
             services.AddScoped<CarrierService>();
+            services.AddScoped<BasePriceService>();
 
             return services;
         }
