@@ -94,8 +94,8 @@
 
                     if (args.item.id === 'EditCustom') {
                         if (grid.getSelectedRecords().length) {
-                            var selectedId = grid.getSelectedRecords()[0].Id;
-                            var formUrl = '/BasePrices/BasePriceForm?id=' + selectedId + '&action=edit';
+                            var selectedId = grid.getSelectedRecords()[0].RowGuid;
+                            var formUrl = '/BasePrices/BasePriceForm?rowGuid=' + selectedId + '&action=edit';
                             window.location.href = formUrl;
                         }
                     }
@@ -108,8 +108,8 @@
                                 okButton: {
                                     click: () => {
                                         dialogObj.hide();
-                                        var selectedId = grid.getSelectedRecords()[0].Id;
-                                        var formUrl = '/BasePrices/BasePriceForm?id=' + selectedId + '&action=delete';
+                                        var selectedId = grid.getSelectedRecords()[0].RowGuid;
+                                        var formUrl = '/BasePrices/BasePriceForm?rowGuid=' + selectedId + '&action=delete';
                                         window.location.href = formUrl;
                                     }
                                 },
