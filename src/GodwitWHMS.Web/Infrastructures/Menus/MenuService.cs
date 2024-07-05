@@ -97,6 +97,7 @@ namespace GodwitWHMS.Infrastructures.Menus
                 new MenuItem("/BasePrices/BasePriceList", "Base Price List", false),
                 new MenuItem("/FuelSurcharges/FuelSurchargeList", "Fuel Surcharge List", false),
                 new MenuItem("/Commissions/CommissionList", "Commission List", false),
+                new MenuItem("/BasePrices/TotalPriceList", "Export Sale Price List", false),
                 new MenuItem("/NumberSequences/NumberSequenceList", "Sequence", false),
                 new MenuItem("#", "Log", true),
                 new MenuItem("/LogSessions/LogSessionList", "Session Log", false),

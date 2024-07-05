@@ -50,7 +50,7 @@ namespace GodwitWHMS.ApiOData
 
 
 
-        [HttpGet("api/CalculatedPrices/Cheapest")]
+        [HttpGet("Cheapest")]
         [AllowAnonymous]
         public async Task<IActionResult> GetCheapestPrices()
         {
