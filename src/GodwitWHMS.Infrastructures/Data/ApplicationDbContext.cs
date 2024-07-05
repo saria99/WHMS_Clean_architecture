@@ -53,6 +53,7 @@ namespace GodwitWHMS.Infrastructures.Data
         public DbSet<Country> Country { get; set; } = default!;
         public DbSet<Carrier> Carrier { get; set; } = default!;
         public DbSet<BasePrice> BasePrice { get; set; } = default!;
+        public DbSet<FuelSurcharge> FuelSurcharge { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -101,6 +102,7 @@ namespace GodwitWHMS.Infrastructures.Data
             modelBuilder.ApplyConfiguration(new CountryConfiguration());
             modelBuilder.ApplyConfiguration(new CarrierConfiguration());
             modelBuilder.ApplyConfiguration(new BasePriceConfiguration());
+            modelBuilder.ApplyConfiguration(new FuelSurchargeConfiguration());
         }
 
     }

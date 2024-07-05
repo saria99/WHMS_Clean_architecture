@@ -47,6 +47,7 @@ using GodwitWHMS.Applications.Features.PackagesSku;
 using GodwitWHMS.Applications.Features.Countries;
 using GodwitWHMS.Applications.Features.Carriers;
 using GodwitWHMS.Applications.Features.BasePrices;
+using GodwitWHMS.Applications.Features.FuelSurcharges;
 
 namespace GodwitWHMS
 {
@@ -103,6 +104,7 @@ namespace GodwitWHMS
             services.AddScoped<CountryServicev2>();
             services.AddScoped<CarrierService>();
             services.AddScoped<BasePriceService>();
+            services.AddScoped<FuelSurchargeService>();
 
             return services;
         }
