@@ -1,0 +1,6 @@
+@GodwitWHMS.BFF_HostAddress = http://localhost:5238
+
+GET {{GodwitWHMS.BFF_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
