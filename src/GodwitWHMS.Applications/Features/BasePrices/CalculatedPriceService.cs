@@ -32,7 +32,6 @@ namespace GodwitWHMS.Applications.Features.BasePrices
             _commissionService = commissionService;
             _basePriceService = basePriceService;
         }
-
         public async Task CalculateAndStorePricesAsync()
         {
             var basePrices = await _basePriceService.GetAll().ToListAsync();
@@ -48,7 +47,7 @@ namespace GodwitWHMS.Applications.Features.BasePrices
                     var totalPrice = priceWithFuelSurcharge + (priceWithFuelSurcharge * commissionPercentage / 100);
 
                     var existingCalculatedPrice = await _context.CalculatedPrice
-                        .FirstOrDefaultAsync(cp => cp.BasePriceId == basePrice.Id && cp.ServiceType == serviceType);
+                        .FirstOrDefaultAsync(cp => cp.BasePriceId == basePrice.Id && cp.ServiceType == serviceType && cp.Weight == basePrice.Weight);
 
                     if (existingCalculatedPrice != null)
                     {
@@ -63,6 +62,7 @@ namespace GodwitWHMS.Applications.Features.BasePrices
                         {
                             BasePriceId = basePrice.Id,
                             ServiceType = serviceType,
+                            Weight = basePrice.Weight,
                             PriceWithFuelSurcharge = priceWithFuelSurcharge,
                             TotalPrice = totalPrice,
                             IsCheapest = false,
@@ -75,24 +75,30 @@ namespace GodwitWHMS.Applications.Features.BasePrices
                 }
             }
 
-            // Flag the cheapest price for each service type
-            foreach (ServiceType serviceType in Enum.GetValues(typeof(ServiceType)))
+            // Flag the cheapest price for each weight and service type
+            var serviceTypes = Enum.GetValues(typeof(ServiceType)).Cast<ServiceType>().ToList();
+            var weights = basePrices.Select(bp => bp.Weight).Distinct().ToList();
+
+            foreach (var serviceType in serviceTypes)
             {
-                var cheapestPrices = await _context.CalculatedPrice
-                    .Where(cp => cp.ServiceType == serviceType)
-                    .OrderBy(cp => cp.TotalPrice)
-                    .ToListAsync();
-
-                if (cheapestPrices.Any())
+                foreach (var weight in weights)
                 {
-                    var cheapestPrice = cheapestPrices.First();
-                    cheapestPrice.IsCheapest = true;
-                    _context.CalculatedPrice.Update(cheapestPrice);
+                    var cheapestPrices = await _context.CalculatedPrice
+                        .Where(cp => cp.ServiceType == serviceType && cp.Weight == weight)
+                        .OrderBy(cp => cp.TotalPrice)
+                        .ToListAsync();
 
-                    foreach (var price in cheapestPrices.Skip(1))
+                    if (cheapestPrices.Any())
                     {
-                        price.IsCheapest = false;
-                        _context.CalculatedPrice.Update(price);
+                        var cheapestPrice = cheapestPrices.First();
+                        cheapestPrice.IsCheapest = true;
+                        _context.CalculatedPrice.Update(cheapestPrice);
+
+                        foreach (var price in cheapestPrices.Skip(1))
+                        {
+                            price.IsCheapest = false;
+                            _context.CalculatedPrice.Update(price);
+                        }
                     }
                 }
             }
@@ -100,11 +106,13 @@ namespace GodwitWHMS.Applications.Features.BasePrices
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<CalculatedPrice>> GetAllCheapestPricesAsync()
+
+        public IQueryable<CalculatedPrice> GetAllCheapestPrices()
         {
-            return await _context.CalculatedPrice
+            return _context.CalculatedPrice
                 .Where(cp => cp.IsCheapest)
-                .ToListAsync();
+                .AsQueryable();
         }
+
     }
 }

@@ -20,6 +20,9 @@ public class CalculatedPriceConfiguration : _BaseConfiguration<CalculatedPrice>
         builder.Property(cp => cp.TotalPrice)
             .IsRequired();
 
+        builder.Property(cp => cp.Weight)
+            .IsRequired();
+
         builder.Property(cp => cp.IsCheapest);
 
         builder.HasOne(cp => cp.BasePrice)

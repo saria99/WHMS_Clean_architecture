@@ -46,27 +46,6 @@ namespace GodwitWHMS.ApiOData
                     CreatedAtUtc = bp.CreatedAtUtc,
                 });
         }
-
-
-
-
-        [HttpGet("Cheapest")]
-        [AllowAnonymous]
-        public async Task<IActionResult> GetCheapestPrices()
-        {
-            var cheapestPrices = await _calculatedPriceService.GetAllCheapestPricesAsync();
-            return Ok(cheapestPrices.Select(cp => new CalculatedPriceDto
-            {
-                Id = cp.Id,
-                BasePriceId = cp.BasePriceId,
-                ServiceType = cp.ServiceType,
-                PriceWithFuelSurcharge = cp.PriceWithFuelSurcharge,
-                TotalPrice = cp.TotalPrice,
-                IsCheapest = cp.IsCheapest,
-                RowGuid = cp.RowGuid,
-                CreatedAtUtc = cp.CreatedAtUtc,
-            }));
-        }
     }
 
 

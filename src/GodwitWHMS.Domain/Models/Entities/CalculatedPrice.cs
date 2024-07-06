@@ -10,6 +10,7 @@ public class CalculatedPrice : _Base
 
     public ServiceType ServiceType { get; set; }
 
+    public decimal Weight { get; set; }
     public decimal PriceWithFuelSurcharge { get; set; }
     public decimal TotalPrice { get; set; }
     public bool IsCheapest { get; set; }
